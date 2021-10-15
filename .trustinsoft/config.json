@@ -160,7 +160,7 @@
         "main": "main"
     },
     {
-        "name": "sigcall_e01",
+        "name": "sigcall_e01 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path": "..",
         "files": [
             "tests/sigcall/sigcall_e01.c"
@@ -168,7 +168,7 @@
         "main": "main"
     },
     {
-        "name": "syscall_e01",
+        "name": "syscall_e01 : SKIP : system()",
         "prefix_path": "..",
         "files": [
             "tests/syscall/syscall_e01.c"
@@ -176,7 +176,7 @@
         "main": "main"
     },
     {
-        "name": "syscall_e02",
+        "name": "syscall_e02 : SKIP : system()",
         "prefix_path": "..",
         "files": [
             "tests/syscall/syscall_e02.c"
