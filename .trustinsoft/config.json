@@ -142,34 +142,20 @@
         "main": "main"
     },
     {
-        "name": "argcomp_e03b",
+        "name": "argcomp_e03",
         "prefix_path": "..",
         "files": [
+            "tests/argcomp/argcomp_e03a.c",
             "tests/argcomp/argcomp_e03b.c"
         ],
         "main": "main"
     },
     {
-        "name": "argcomp_e04b",
+        "name": "argcomp_e04",
         "prefix_path": "..",
         "files": [
+            "tests/argcomp/argcomp_e04a.c",
             "tests/argcomp/argcomp_e04b.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "argcomp_e03a",
-        "prefix_path": "..",
-        "files": [
-            "tests/argcomp/argcomp_e03a.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "argcomp_e04a",
-        "prefix_path": "..",
-        "files": [
-            "tests/argcomp/argcomp_e04a.c"
         ],
         "main": "main"
     },
