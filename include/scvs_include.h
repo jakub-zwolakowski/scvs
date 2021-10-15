@@ -15,6 +15,10 @@
 #include <limits.h>
 #include <errno.h>
 
+#ifdef __TRUSTINSOFT_ANALYZER__
+#include <tis_builtin.h>
+#endif
+
 #define TESTFILE "scvs_testfile.txt"
 
 #define GET_TAINTED_STRING(buf, buf_size) \
@@ -29,6 +33,15 @@
     }                                     \
     strncpy(buf, taint, taint_size);      \
   } while (0)
+
+#ifdef __TRUSTINSOFT_ANALYZER__
+
+#define GET_TAINTED_INTEGER(type, val) \
+  do { \
+    tis_make_unknown(&val, sizeof(val)); \
+  } while (0)
+
+#else
 
 #define GET_TAINTED_INTEGER(type, val)    \
  do {					  \
@@ -46,5 +59,7 @@
     }                                     \
     val = tmp;                            \
   } while (0)
+
+#endif
 
 #endif

@@ -193,7 +193,7 @@
         "main":"main"
     },
     {
-        "name":"chreof_e01",
+        "name":"chreof_e01 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/chreof/chreof_e01.c"
@@ -209,7 +209,7 @@
         }
     },
     {
-        "name":"chreof_e02",
+        "name":"chreof_e02 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/chreof/chreof_e02.c"
@@ -225,7 +225,7 @@
         }
     },
     {
-        "name":"chrsgnext_e01",
+        "name":"chrsgnext_e01 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/chrsgnext/chrsgnext_e01.c"
@@ -233,20 +233,24 @@
         "main":"main"
     },
     {
-        "name":"dblfree_e01",
+        "name":"dblfree_e01 : NO UB ('free(NULL)' does nothing - we can repeat it as many times as we want)",
         "prefix_path":"..",
         "files":[
             "tests/dblfree/dblfree_e01.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
-        "name":"dblfree_e02",
+        "name":"dblfree_e02 : NO UB (no double free happening in any possible program execution)",
         "prefix_path":"..",
         "files":[
             "tests/dblfree/dblfree_e02.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
         "name":"diverr_e01",
@@ -254,7 +258,9 @@
         "files":[
             "tests/diverr/diverr_e01.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
         "name":"diverr_e02",
@@ -262,7 +268,9 @@
         "files":[
             "tests/diverr/diverr_e02.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
         "name":"diverr_e03",
@@ -270,7 +278,9 @@
         "files":[
             "tests/diverr/diverr_e03.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
         "name":"diverr_e04",
@@ -278,7 +288,9 @@
         "files":[
             "tests/diverr/diverr_e04.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
         "name":"fileclose_e01",
