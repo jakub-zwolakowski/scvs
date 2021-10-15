@@ -1,6 +1,6 @@
 [
     {
-        "name":"accfree_e01 : DETECTED",
+        "name":"accfree_e01 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e01.c"
@@ -8,7 +8,7 @@
         "main":"main"
     },
     {
-        "name":"accfree_e02 : DETECTED",
+        "name":"accfree_e02 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e02.c"
@@ -17,7 +17,7 @@
         "val-args":" 42"
     },
     {
-        "name":"accfree_e03 : DETECTED",
+        "name":"accfree_e03 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e03.c"
@@ -73,7 +73,7 @@
         "main":"main"
     },
     {
-        "name":"argcomp_e01 : DETECTED",
+        "name":"argcomp_e01 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e01.c"
@@ -81,7 +81,7 @@
         "main":"main"
     },
     {
-        "name":"argcomp_e02 : DETECTED",
+        "name":"argcomp_e02 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e02a.c",
@@ -90,7 +90,7 @@
         "main":"main"
     },
     {
-        "name":"argcomp_e03 : DETECTED",
+        "name":"argcomp_e03 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e03a.c",
@@ -99,7 +99,7 @@
         "main":"main"
     },
     {
-        "name":"argcomp_e04 : DETECTED",
+        "name":"argcomp_e04 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e04a.c",
@@ -153,7 +153,7 @@
         "val-timeout":30
     },
     {
-        "name":"boolasgn_e03 : NO FALSE POSITIVE",
+        "name":"boolasgn_e03 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e03.c"
@@ -161,7 +161,7 @@
         "main":"main"
     },
     {
-        "name":"boolasgn_e04 : NO FALSE POSITIVE",
+        "name":"boolasgn_e04 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e04.c"
@@ -169,7 +169,7 @@
         "main":"main"
     },
     {
-        "name":"boolasgn_e05 : NO FALSE POSITIVE",
+        "name":"boolasgn_e05 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e05.c"
@@ -185,7 +185,7 @@
         "main":"main"
     },
     {
-        "name":"boolasgn_e07 : NO FALSE POSITIVE",
+        "name":"boolasgn_e07 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e07.c"
@@ -253,7 +253,7 @@
         "slevel":100
     },
     {
-        "name":"diverr_e01 : DETECTED",
+        "name":"diverr_e01 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e01.c"
@@ -263,7 +263,7 @@
         "slevel":100
     },
     {
-        "name":"diverr_e02 : DETECTED",
+        "name":"diverr_e02 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e02.c"
@@ -273,7 +273,7 @@
         "slevel":100
     },
     {
-        "name":"diverr_e03 : DETECTED",
+        "name":"diverr_e03 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e03.c"
@@ -283,7 +283,7 @@
         "slevel":100
     },
     {
-        "name":"diverr_e04 : DETECTED",
+        "name":"diverr_e04 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e04.c"
@@ -324,7 +324,7 @@
         "main":"main"
     },
     {
-        "name":"funcdecl_e01 : DETECTED",
+        "name":"funcdecl_e01 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e01a.c",
@@ -333,7 +333,7 @@
         "main":"main"
     },
     {
-        "name":"funcdecl_e02 : DETECTED",
+        "name":"funcdecl_e02 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e02a.c",
@@ -342,7 +342,7 @@
         "main":"main"
     },
     {
-        "name":"funcdecl_e03 : DETECTED",
+        "name":"funcdecl_e03 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e03a.c",
@@ -372,20 +372,24 @@
         "main":"main"
     },
     {
-        "name":"intoflow_e01",
+        "name":"intoflow_e01 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/intoflow/intoflow_e01.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
-        "name":"intoflow_e02",
+        "name":"intoflow_e02 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/intoflow/intoflow_e02.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
         "name":"intptrconv_005",
