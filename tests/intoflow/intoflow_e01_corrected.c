@@ -1,4 +1,4 @@
-/*	Rule: fileclose	Test File: fileclose_e02.c
+/*	Rule: intoflow	Test File: intoflow_e01.c
  *
  * Copyright (c) 2012 Carnegie Mellon University.
  * All Rights Reserved.
@@ -49,45 +49,32 @@
  *  SECRETS.”
  * 
  *
- * Rule: [fileclose]
- * Description: diagnostic is required because the resource allocated by 
- *              the call to malloc() is not freed
- * Diagnostic: required on line 78
+ * Rule: [intoflow]
+ * Description: diagnostic is required on implementations that trap on 
+ *              signed integer overflow because the expression x + 1 may 
+ *              result in signed integer overflow
+ * Diagnostic: required on line 79
  * Additional Test Files: None
  * Command-line Options: None
  */
 
+#include "../../include/scvs_include.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
-#ifdef __TRUSTINSOFT_ANALYZER__
-#include <tis_builtin.h>
-#endif
 
-int fun(void);
+unsigned int add(int);
 
 int main(void) {
+  int i = 1;
 
-  if(fun() == 1) {
-  /* ... */
-  } else {
-   return EXIT_FAILURE;
+  while(i++ <= 10) {
+   printf("%d: %u\n", i, add(i));
   }
- 
-#ifdef __TRUSTINSOFT_ANALYZER__
-  tis_check_leak();
-#endif
+  
   return EXIT_SUCCESS;
 }
 
-int fun(void) {
-  char *text_buffer = (char *)malloc(BUFSIZ); // diagnostic required
- 
-  if (text_buffer == NULL) {
-    return 0;
-  } else {
-    memset(text_buffer, 9, (BUFSIZ / 2));
-  }
-  return 1;
+unsigned int add(int ui) {
+  GET_TAINTED_INTEGER(int, ui);
+  return ui++; // diagnostic required
 }
-

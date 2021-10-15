@@ -1,4 +1,4 @@
-/*	Rule: fileclose	Test File: fileclose_e02.c
+/*	Rule: invptr	Test File: invptr_e04.c
  *
  * Copyright (c) 2012 Carnegie Mellon University.
  * All Rights Reserved.
@@ -49,45 +49,51 @@
  *  SECRETS.”
  * 
  *
- * Rule: [fileclose]
- * Description: diagnostic is required because the resource allocated by 
- *              the call to malloc() is not freed
- * Diagnostic: required on line 78
+ * Rule: [invptr]
+ * Description: diagnostic is required because if the string path does not 
+ *              contain the backslash character in the first 
+ *              MAX_NAME_LENGTH + 1 characters, then name will be dereferenced 
+ *              past the end pointer
+ * Diagnostic: required on line 84
  * Additional Test Files: None
  * Command-line Options: None
  */
 
+#define MAX_NAME_LENGTH 64
+
 #include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #ifdef __TRUSTINSOFT_ANALYZER__
 #include <tis_builtin.h>
 #endif
 
-int fun(void);
+char *get_name(const char *);
 
 int main(void) {
-
-  if(fun() == 1) {
-  /* ... */
-  } else {
-   return EXIT_FAILURE;
-  }
- 
+  const char *s = "./home/user/.profile";
 #ifdef __TRUSTINSOFT_ANALYZER__
-  tis_check_leak();
+  char str[100];
+  tis_make_unknown(str, sizeof(str));
+  str[sizeof(str) - 1] = '\0';
+  s = str;
 #endif
-  return EXIT_SUCCESS;
+
+  if(get_name(s) != NULL) {
+    return EXIT_SUCCESS;
+  } else {
+    return EXIT_FAILURE;
+  }
 }
 
-int fun(void) {
-  char *text_buffer = (char *)malloc(BUFSIZ); // diagnostic required
- 
-  if (text_buffer == NULL) {
-    return 0;
-  } else {
-    memset(text_buffer, 9, (BUFSIZ / 2));
-  }
-  return 1;
+char *get_name(const char *path) {
+
+  char *name = (char *)malloc(MAX_NAME_LENGTH + 1);
+
+  if (name != NULL) {
+    while (*path != '\\') {
+        *name++ = *path++;  // diagnostic required
+    }
+    *name = '\0';
+  } 
+  return name;
 }
 

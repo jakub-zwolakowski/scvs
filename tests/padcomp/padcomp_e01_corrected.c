@@ -1,4 +1,4 @@
-/*	Rule: fileclose	Test File: fileclose_e02.c
+/*	Rule: padcomp	Test File: padcomp_e01.c
  *
  * Copyright (c) 2012 Carnegie Mellon University.
  * All Rights Reserved.
@@ -49,10 +49,11 @@
  *  SECRETS.”
  * 
  *
- * Rule: [fileclose]
- * Description: diagnostic is required because the resource allocated by 
- *              the call to malloc() is not freed
- * Diagnostic: required on line 78
+ * Rule: [padcomp]
+ * Description: diagnostic is required because the C Standard Library 
+ *              function memcmp() is used to compare the structures b1 
+ *              and b2, including any padding data
+ * Diagnostic: required on line 108
  * Additional Test Files: None
  * Command-line Options: None
  */
@@ -60,34 +61,54 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#ifdef __TRUSTINSOFT_ANALYZER__
-#include <tis_builtin.h>
-#endif
 
-int fun(void);
+#define MAX_BUF 25
+
+struct S_buffer {
+  char buff_type;
+  size_t size;
+  char buffer[MAX_BUF];
+};
+
+typedef struct S_buffer buffer;
+
+int buf_comp(const buffer *, const buffer *);
+int buf_init(buffer *, buffer *);
 
 int main(void) {
 
-  if(fun() == 1) {
-  /* ... */
+  buffer a, b; // Not static anymore
+
+  if((buf_init(&a, &b)) == 1) {
+    printf("buffers match\n");
   } else {
-   return EXIT_FAILURE;
+    printf("buffers do not match\n");
   }
- 
-#ifdef __TRUSTINSOFT_ANALYZER__
-  tis_check_leak();
-#endif
   return EXIT_SUCCESS;
 }
 
-int fun(void) {
-  char *text_buffer = (char *)malloc(BUFSIZ); // diagnostic required
- 
-  if (text_buffer == NULL) {
-    return 0;
+int buf_init(buffer *b1, buffer *b2) {
+   int i;
+   b1->buff_type = 'a';
+   b2->buff_type = 'a'; // Same as b1->buff_type
+
+   b1->size = sizeof(buffer);
+   b2->size = sizeof(buffer);
+
+   for (i = 0; i < MAX_BUF; i++) {
+     b1->buffer[i] = i;
+     b2->buffer[i] = i;
+   }
+
+   return buf_comp(b1, b2);
+}  
+
+int buf_comp(const buffer *s1, const buffer *s2) {
+
+  if (!memcmp(s1, s2, sizeof(buffer))) {  // diagnostic required
+    return 1; 
   } else {
-    memset(text_buffer, 9, (BUFSIZ / 2));
+    return 0;
   }
-  return 1;
 }
 
