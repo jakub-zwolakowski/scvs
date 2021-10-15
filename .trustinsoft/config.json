@@ -253,7 +253,7 @@
         "slevel":100
     },
     {
-        "name":"diverr_e01",
+        "name":"diverr_e01 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e01.c"
@@ -263,7 +263,7 @@
         "slevel":100
     },
     {
-        "name":"diverr_e02",
+        "name":"diverr_e02 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e02.c"
@@ -273,7 +273,7 @@
         "slevel":100
     },
     {
-        "name":"diverr_e03",
+        "name":"diverr_e03 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e03.c"
@@ -283,7 +283,7 @@
         "slevel":100
     },
     {
-        "name":"diverr_e04",
+        "name":"diverr_e04 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e04.c"
@@ -293,15 +293,22 @@
         "slevel":100
     },
     {
-        "name":"fileclose_e01",
+        "name":"fileclose_e01 : CHECK (not closing a file is not UB)",
         "prefix_path":"..",
         "files":[
             "tests/fileclose/fileclose_e01.c"
         ],
-        "main":"main"
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"mydata.dat"
+                }
+            ]
+        }
     },
     {
-        "name":"fileclose_e02",
+        "name":"fileclose_e02 : NO UB (resource leak is not UB), STILL DETECTED IN THE LOG",
         "prefix_path":"..",
         "files":[
             "tests/fileclose/fileclose_e02.c"
@@ -309,7 +316,7 @@
         "main":"main"
     },
     {
-        "name":"filecpy_e01",
+        "name":"filecpy_e01 : TODO",
         "prefix_path":"..",
         "files":[
             "tests/filecpy/filecpy_e01.c"
@@ -317,7 +324,7 @@
         "main":"main"
     },
     {
-        "name":"funcdecl_e01",
+        "name":"funcdecl_e01 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e01a.c",
@@ -326,7 +333,7 @@
         "main":"main"
     },
     {
-        "name":"funcdecl_e02",
+        "name":"funcdecl_e02 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e02a.c",
@@ -335,7 +342,7 @@
         "main":"main"
     },
     {
-        "name":"funcdecl_e03",
+        "name":"funcdecl_e03 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e03a.c",
@@ -344,7 +351,7 @@
         "main":"main"
     },
     {
-        "name":"funcdecl_e04",
+        "name":"funcdecl_e04 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e04a.c",
@@ -352,21 +359,14 @@
         ],
         "main":"main",
         "cpp-extra-args":[
-            "-I tests/funcdecl"
+            "-Itests/funcdecl"
         ]
     },
     {
-        "name":"funcdecl_ex1a",
+        "name":"funcdecl_ex1 : CHECK",
         "prefix_path":"..",
         "files":[
-            "tests/funcdecl/funcdecl_ex1a.c"
-        ],
-        "main":"main"
-    },
-    {
-        "name":"funcdecl_ex1b",
-        "prefix_path":"..",
-        "files":[
+            "tests/funcdecl/funcdecl_ex1a.c",
             "tests/funcdecl/funcdecl_ex1b.c"
         ],
         "main":"main"

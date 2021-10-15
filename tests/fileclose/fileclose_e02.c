@@ -60,6 +60,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#ifdef __TRUSTINSOFT_ANALYZER__
+#include <tis_builtin.h>
+#endif
 
 int fun(void);
 
@@ -71,6 +74,9 @@ int main(void) {
    return EXIT_FAILURE;
   }
  
+#ifdef __TRUSTINSOFT_ANALYZER__
+  tis_check_leak();
+#endif
   return EXIT_SUCCESS;
 }
 
