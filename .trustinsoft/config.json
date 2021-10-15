@@ -1,6 +1,6 @@
 [
     {
-        "name":"accfree_e01",
+        "name":"accfree_e01 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e01.c"
@@ -8,7 +8,7 @@
         "main":"main"
     },
     {
-        "name":"accfree_e02",
+        "name":"accfree_e02 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e02.c"
@@ -17,7 +17,7 @@
         "val-args":" 42"
     },
     {
-        "name":"accfree_e03",
+        "name":"accfree_e03 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e03.c"
@@ -33,7 +33,7 @@
         "main":"main"
     },
     {
-        "name":"addrescape_e01",
+        "name":"addrescape_e01 : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e01.c"
@@ -41,7 +41,7 @@
         "main":"main"
     },
     {
-        "name":"addrescape_e02",
+        "name":"addrescape_e02 : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e02.c"
@@ -49,7 +49,7 @@
         "main":"main"
     },
     {
-        "name":"addrescape_e03",
+        "name":"addrescape_e03 : NO UB (escaping address not used)",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e03.c"
@@ -57,7 +57,7 @@
         "main":"main"
     },
     {
-        "name":"alignconv_e01",
+        "name":"alignconv_e01 : SKIP : ADDRESS ALIGNMENT",
         "prefix_path":"..",
         "files":[
             "tests/alignconv/alignconv_e01.c"
@@ -65,7 +65,7 @@
         "main":"main"
     },
     {
-        "name":"alignconv_e02",
+        "name":"alignconv_e02 : SKIP : ADDRESS ALIGNMENT",
         "prefix_path":"..",
         "files":[
             "tests/alignconv/alignconv_e02.c"
@@ -73,7 +73,7 @@
         "main":"main"
     },
     {
-        "name":"argcomp_e01",
+        "name":"argcomp_e01 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e01.c"
@@ -81,7 +81,7 @@
         "main":"main"
     },
     {
-        "name":"argcomp_e02",
+        "name":"argcomp_e02 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e02a.c",
@@ -90,7 +90,7 @@
         "main":"main"
     },
     {
-        "name":"argcomp_e03",
+        "name":"argcomp_e03 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e03a.c",
@@ -99,7 +99,7 @@
         "main":"main"
     },
     {
-        "name":"argcomp_e04",
+        "name":"argcomp_e04 : DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e04a.c",
@@ -198,7 +198,15 @@
         "files":[
             "tests/chreof/chreof_e01.c"
         ],
-        "main":"main"
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"tis-mkfs-stdin",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
         "name":"chreof_e02",
@@ -206,7 +214,15 @@
         "files":[
             "tests/chreof/chreof_e02.c"
         ],
-        "main":"main"
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"tis-mkfs-stdin",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
         "name":"chrsgnext_e01",
