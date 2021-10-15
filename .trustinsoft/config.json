@@ -305,68 +305,43 @@
         "main":"main"
     },
     {
-        "name":"funcdecl_e01a",
+        "name":"funcdecl_e01",
         "prefix_path":"..",
         "files":[
-            "tests/funcdecl/funcdecl_e01a.c"
-        ],
-        "main":"main"
-    },
-    {
-        "name":"funcdecl_e01b",
-        "prefix_path":"..",
-        "files":[
+            "tests/funcdecl/funcdecl_e01a.c",
             "tests/funcdecl/funcdecl_e01b.c"
         ],
         "main":"main"
     },
     {
-        "name":"funcdecl_e02a",
+        "name":"funcdecl_e02",
         "prefix_path":"..",
         "files":[
-            "tests/funcdecl/funcdecl_e02a.c"
-        ],
-        "main":"main"
-    },
-    {
-        "name":"funcdecl_e02b",
-        "prefix_path":"..",
-        "files":[
+            "tests/funcdecl/funcdecl_e02a.c",
             "tests/funcdecl/funcdecl_e02b.c"
         ],
         "main":"main"
     },
     {
-        "name":"funcdecl_e03a",
+        "name":"funcdecl_e03",
         "prefix_path":"..",
         "files":[
-            "tests/funcdecl/funcdecl_e03a.c"
-        ],
-        "main":"main"
-    },
-    {
-        "name":"funcdecl_e03b",
-        "prefix_path":"..",
-        "files":[
+            "tests/funcdecl/funcdecl_e03a.c",
             "tests/funcdecl/funcdecl_e03b.c"
         ],
         "main":"main"
     },
     {
-        "name":"funcdecl_e04a",
+        "name":"funcdecl_e04",
         "prefix_path":"..",
         "files":[
-            "tests/funcdecl/funcdecl_e04a.c"
-        ],
-        "main":"main"
-    },
-    {
-        "name":"funcdecl_e04b",
-        "prefix_path":"..",
-        "files":[
+            "tests/funcdecl/funcdecl_e04a.c",
             "tests/funcdecl/funcdecl_e04b.c"
         ],
-        "main":"main"
+        "main":"main",
+        "cpp-extra-args":[
+            "-I tests/funcdecl"
+        ]
     },
     {
         "name":"funcdecl_ex1a",
