@@ -22,7 +22,8 @@
         "files": [
             "tests/accfree/accfree_e02.c"
         ],
-        "main": "main"
+        "main": "main",
+        "val-args": " 42"
     },
     {
         "name": "accfree_e03",
