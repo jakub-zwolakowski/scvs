@@ -73,7 +73,7 @@ int main(void) {
 }
 
 void f(char *c_str1, size_t size) {
-  char *c_str2 = (char *)realloc(c_str1, size);
+  char *c_str2 = (char *)realloc(c_str1, size); // TIS: UB - an array is not reallocable
   if (c_str2 == NULL) {
     free(c_str1); // diagnostic required
     return;

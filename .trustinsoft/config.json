@@ -34,7 +34,7 @@
         "main": "main"
     },
     {
-        "name": "accsig_e01",
+        "name": "accsig_e01 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path": "..",
         "files": [
             "tests/accsig/accsig_e01.c"
@@ -42,15 +42,16 @@
         "main": "main"
     },
     {
-        "name": "boolasgn_e01",
+        "name": "boolasgn_e01 : NO UB, INFINITE LOOP",
         "prefix_path": "..",
         "files": [
             "tests/boolasgn/boolasgn_e01.c"
         ],
-        "main": "main"
+        "main": "main",
+        "val-timeout": 30
     },
     {
-        "name": "boolasgn_e03",
+        "name": "boolasgn_e03 : NO FALSE POSITIVE",
         "prefix_path": "..",
         "files": [
             "tests/boolasgn/boolasgn_e03.c"
@@ -58,7 +59,7 @@
         "main": "main"
     },
     {
-        "name": "boolasgn_e05",
+        "name": "boolasgn_e05 : NO FALSE POSITIVE",
         "prefix_path": "..",
         "files": [
             "tests/boolasgn/boolasgn_e05.c"
@@ -66,7 +67,7 @@
         "main": "main"
     },
     {
-        "name": "boolasgn_e07",
+        "name": "boolasgn_e07 : NO FALSE POSITIVE",
         "prefix_path": "..",
         "files": [
             "tests/boolasgn/boolasgn_e07.c"
@@ -74,15 +75,17 @@
         "main": "main"
     },
     {
-        "name": "boolasgn_e02",
+        "name": "boolasgn_e02 : NO UB, INFINITE LOOP",
         "prefix_path": "..",
         "files": [
             "tests/boolasgn/boolasgn_e02.c"
         ],
-        "main": "main"
+        "main": "main",
+        "cpp-extra-args": [ "-DTIS_DETERMINISTIC_LIBC" ],
+        "val-timeout": 30
     },
     {
-        "name": "boolasgn_e04",
+        "name": "boolasgn_e04 : NO FALSE POSITIVE",
         "prefix_path": "..",
         "files": [
             "tests/boolasgn/boolasgn_e04.c"
@@ -90,7 +93,7 @@
         "main": "main"
     },
     {
-        "name": "boolasgn_e06",
+        "name": "boolasgn_e06 : NO UB",
         "prefix_path": "..",
         "files": [
             "tests/boolasgn/boolasgn_e06.c"
@@ -98,7 +101,7 @@
         "main": "main"
     },
     {
-        "name": "asyncsig_e01",
+        "name": "asyncsig_e01 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path": "..",
         "files": [
             "tests/asyncsig/asyncsig_e01.c"
@@ -106,7 +109,7 @@
         "main": "main"
     },
     {
-        "name": "asyncsig_e02",
+        "name": "asyncsig_e02 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path": "..",
         "files": [
             "tests/asyncsig/asyncsig_e02.c"
@@ -114,7 +117,7 @@
         "main": "main"
     },
     {
-        "name": "asyncsig_e03",
+        "name": "asyncsig_e03 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path": "..",
         "files": [
             "tests/asyncsig/asyncsig_e03.c"
@@ -130,9 +133,10 @@
         "main": "main"
     },
     {
-        "name": "argcomp_e02b",
+        "name": "argcomp_e02",
         "prefix_path": "..",
         "files": [
+            "tests/argcomp/argcomp_e02a.c",
             "tests/argcomp/argcomp_e02b.c"
         ],
         "main": "main"
@@ -150,14 +154,6 @@
         "prefix_path": "..",
         "files": [
             "tests/argcomp/argcomp_e04b.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "argcomp_e02a",
-        "prefix_path": "..",
-        "files": [
-            "tests/argcomp/argcomp_e02a.c"
         ],
         "main": "main"
     },
