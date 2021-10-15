@@ -1,1098 +1,1108 @@
 [
     {
-        "name": "ptrcomp_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/ptrcomp/ptrcomp_e01.c"
-        ],
-        "main": "main",
-        "sa": true
-    },
-    {
-        "name": "accfree_e01",
-        "prefix_path": "..",
-        "files": [
+        "name":"accfree_e01",
+        "prefix_path":"..",
+        "files":[
             "tests/accfree/accfree_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "accfree_e02",
-        "prefix_path": "..",
-        "files": [
+        "name":"accfree_e02",
+        "prefix_path":"..",
+        "files":[
             "tests/accfree/accfree_e02.c"
         ],
-        "main": "main",
-        "val-args": " 42"
+        "main":"main",
+        "val-args":" 42"
     },
     {
-        "name": "accfree_e03",
-        "prefix_path": "..",
-        "files": [
+        "name":"accfree_e03",
+        "prefix_path":"..",
+        "files":[
             "tests/accfree/accfree_e03.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "accsig_e01 : SKIP - CONCURRENT - SIGNALS",
-        "prefix_path": "..",
-        "files": [
+        "name":"accsig_e01 : SKIP - CONCURRENT - SIGNALS",
+        "prefix_path":"..",
+        "files":[
             "tests/accsig/accsig_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "boolasgn_e01 : NO UB, INFINITE LOOP",
-        "prefix_path": "..",
-        "files": [
-            "tests/boolasgn/boolasgn_e01.c"
+        "name":"addrescape_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/addrescape/addrescape_e01.c"
         ],
-        "main": "main",
-        "val-timeout": 30
+        "main":"main"
     },
     {
-        "name": "boolasgn_e03 : NO FALSE POSITIVE",
-        "prefix_path": "..",
-        "files": [
-            "tests/boolasgn/boolasgn_e03.c"
+        "name":"addrescape_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/addrescape/addrescape_e02.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "boolasgn_e05 : NO FALSE POSITIVE",
-        "prefix_path": "..",
-        "files": [
-            "tests/boolasgn/boolasgn_e05.c"
+        "name":"addrescape_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/addrescape/addrescape_e03.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "boolasgn_e07 : NO FALSE POSITIVE",
-        "prefix_path": "..",
-        "files": [
-            "tests/boolasgn/boolasgn_e07.c"
+        "name":"alignconv_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/alignconv/alignconv_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "boolasgn_e02 : NO UB, INFINITE LOOP",
-        "prefix_path": "..",
-        "files": [
-            "tests/boolasgn/boolasgn_e02.c"
+        "name":"alignconv_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/alignconv/alignconv_e02.c"
         ],
-        "main": "main",
-        "cpp-extra-args": [ "-DTIS_DETERMINISTIC_LIBC" ],
-        "val-timeout": 30
+        "main":"main"
     },
     {
-        "name": "boolasgn_e04 : NO FALSE POSITIVE",
-        "prefix_path": "..",
-        "files": [
-            "tests/boolasgn/boolasgn_e04.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "boolasgn_e06 : NO UB",
-        "prefix_path": "..",
-        "files": [
-            "tests/boolasgn/boolasgn_e06.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "asyncsig_e01 : SKIP - CONCURRENT - SIGNALS",
-        "prefix_path": "..",
-        "files": [
-            "tests/asyncsig/asyncsig_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "asyncsig_e02 : SKIP - CONCURRENT - SIGNALS",
-        "prefix_path": "..",
-        "files": [
-            "tests/asyncsig/asyncsig_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "asyncsig_e03 : SKIP - CONCURRENT - SIGNALS",
-        "prefix_path": "..",
-        "files": [
-            "tests/asyncsig/asyncsig_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "argcomp_e01",
-        "prefix_path": "..",
-        "files": [
+        "name":"argcomp_e01",
+        "prefix_path":"..",
+        "files":[
             "tests/argcomp/argcomp_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "argcomp_e02",
-        "prefix_path": "..",
-        "files": [
+        "name":"argcomp_e02",
+        "prefix_path":"..",
+        "files":[
             "tests/argcomp/argcomp_e02a.c",
             "tests/argcomp/argcomp_e02b.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "argcomp_e03",
-        "prefix_path": "..",
-        "files": [
+        "name":"argcomp_e03",
+        "prefix_path":"..",
+        "files":[
             "tests/argcomp/argcomp_e03a.c",
             "tests/argcomp/argcomp_e03b.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "argcomp_e04",
-        "prefix_path": "..",
-        "files": [
+        "name":"argcomp_e04",
+        "prefix_path":"..",
+        "files":[
             "tests/argcomp/argcomp_e04a.c",
             "tests/argcomp/argcomp_e04b.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "sigcall_e01 : SKIP - CONCURRENT - SIGNALS",
-        "prefix_path": "..",
-        "files": [
-            "tests/sigcall/sigcall_e01.c"
+        "name":"asyncsig_e01 : SKIP - CONCURRENT - SIGNALS",
+        "prefix_path":"..",
+        "files":[
+            "tests/asyncsig/asyncsig_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "syscall_e01 : SKIP : system()",
-        "prefix_path": "..",
-        "files": [
-            "tests/syscall/syscall_e01.c"
+        "name":"asyncsig_e02 : SKIP - CONCURRENT - SIGNALS",
+        "prefix_path":"..",
+        "files":[
+            "tests/asyncsig/asyncsig_e02.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "syscall_e02 : SKIP : system()",
-        "prefix_path": "..",
-        "files": [
-            "tests/syscall/syscall_e02.c"
+        "name":"asyncsig_e03 : SKIP - CONCURRENT - SIGNALS",
+        "prefix_path":"..",
+        "files":[
+            "tests/asyncsig/asyncsig_e03.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "padcomp_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/padcomp/padcomp_e01.c"
+        "name":"boolasgn_e01 : NO UB, INFINITE LOOP",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e01.c"
         ],
-        "main": "main"
+        "main":"main",
+        "val-timeout":30
     },
     {
-        "name": "intptrconv_005",
-        "prefix_path": "..",
-        "files": [
-            "tests/intptrconv/intptrconv_005.c"
+        "name":"boolasgn_e02 : NO UB, INFINITE LOOP",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e02.c"
         ],
-        "main": "main"
-    },
-    {
-        "name": "intptrconv_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/intptrconv/intptrconv_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "intptrconv_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/intptrconv/intptrconv_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "intptrconv_ex1",
-        "prefix_path": "..",
-        "files": [
-            "tests/intptrconv/intptrconv_ex1.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "intptrconv_ex2",
-        "prefix_path": "..",
-        "files": [
-            "tests/intptrconv/intptrconv_ex2.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "alignconv_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/alignconv/alignconv_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "alignconv_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/alignconv/alignconv_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "filecpy_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/filecpy/filecpy_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_e01a",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_e01a.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_e02a",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_e02a.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_e03a",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_e03a.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_e04a",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_e04a.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_ex1a",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_ex1a.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_e01b",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_e01b.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_e02b",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_e02b.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_e03b",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_e03b.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_e04b",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_e04b.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "funcdecl_ex1b",
-        "prefix_path": "..",
-        "files": [
-            "tests/funcdecl/funcdecl_ex1b.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "nullref_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/nullref/nullref_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "addrescape_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/addrescape/addrescape_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "addrescape_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/addrescape/addrescape_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "addrescape_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/addrescape/addrescape_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "signconv_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/signconv/signconv_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "swtchdflt_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/swtchdflt/swtchdflt_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "fileclose_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/fileclose/fileclose_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "fileclose_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/fileclose/fileclose_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "liberr_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/liberr/liberr_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "liberr_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/liberr/liberr_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "liberr_ex1",
-        "prefix_path": "..",
-        "files": [
-            "tests/liberr/liberr_ex1.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "liberr_ex2",
-        "prefix_path": "..",
-        "files": [
-            "tests/liberr/liberr_ex2.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libptr_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/libptr/libptr_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libptr_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/libptr/libptr_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libptr_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/libptr/libptr_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libptr_e04",
-        "prefix_path": "..",
-        "files": [
-            "tests/libptr/libptr_e04.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libptr_e05",
-        "prefix_path": "..",
-        "files": [
-            "tests/libptr/libptr_e05.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e05",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e05.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e07",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e07.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e09",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e09.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e11",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e11.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e04",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e04.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e06",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e06.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e08",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e08.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e10",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e10.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "invptr_e12",
-        "prefix_path": "..",
-        "files": [
-            "tests/invptr/invptr_e12.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "dblfree_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/dblfree/dblfree_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "dblfree_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/dblfree/dblfree_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "usrfmt_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/usrfmt/usrfmt_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "usrfmt_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/usrfmt/usrfmt_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "usrfmt_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/usrfmt/usrfmt_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "usrfmt_e04",
-        "prefix_path": "..",
-        "files": [
-            "tests/usrfmt/usrfmt_e04.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "inverrno_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/inverrno/inverrno_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "inverrno_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/inverrno/inverrno_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "inverrno_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/inverrno/inverrno_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "diverr_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/diverr/diverr_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "diverr_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/diverr/diverr_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "diverr_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/diverr/diverr_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "diverr_e04",
-        "prefix_path": "..",
-        "files": [
-            "tests/diverr/diverr_e04.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "ioileave_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/ioileave/ioileave_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "strmod_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/strmod/strmod_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "strmod_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/strmod/strmod_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "strmod_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/strmod/strmod_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "strmod_e04",
-        "prefix_path": "..",
-        "files": [
-            "tests/strmod/strmod_e04.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "strmod_e05",
-        "prefix_path": "..",
-        "files": [
-            "tests/strmod/strmod_e05.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "strmod_e06",
-        "prefix_path": "..",
-        "files": [
-            "tests/strmod/strmod_e06.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libmod_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/libmod/libmod_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libmod_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/libmod/libmod_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libmod_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/libmod/libmod_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "libmod_e04",
-        "prefix_path": "..",
-        "files": [
-            "tests/libmod/libmod_e04.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "intoflow_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/intoflow/intoflow_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "intoflow_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/intoflow/intoflow_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "nonnullstr_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/nonnullstr/nonnullstr_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "nonnullstr_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/nonnullstr/nonnullstr_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "nonnullstr_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/nonnullstr/nonnullstr_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "chrsgnext_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/chrsgnext/chrsgnext_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "restrict_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/restrict/restrict_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "restrict_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/restrict/restrict_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "xfree_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/xfree/xfree_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "xfree_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/xfree/xfree_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "uninitref_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/uninitref/uninitref_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "uninitref_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/uninitref/uninitref_e02.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "uninitref_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/uninitref/uninitref_e03.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "uninitref_e04",
-        "prefix_path": "..",
-        "files": [
-            "tests/uninitref/uninitref_e04.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "ptrobj_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/ptrobj/ptrobj_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "ptrobj_ex1",
-        "prefix_path": "..",
-        "files": [
-            "tests/ptrobj/ptrobj_ex1.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "ptrobj_ex2",
-        "prefix_path": "..",
-        "files": [
-            "tests/ptrobj/ptrobj_ex2.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "taintstrcpy_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/taintstrcpy/taintstrcpy_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "sizeofptr_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/sizeofptr/sizeofptr_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "taintnoproto_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/taintnoproto/taintnoproto_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "taintformatio_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/taintformatio/taintformatio_e01.c"
-        ],
-        "main": "main"
-    },
-    {
-        "name": "taintformatio_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/taintformatio/taintformatio_e02.c"
+        "main":"main",
+        "cpp-extra-args":[
+            "-DTIS_DETERMINISTIC_LIBC"
         ],
-        "main": "main"
+        "val-timeout":30
     },
     {
-        "name": "xfilepos_002",
-        "prefix_path": "..",
-        "files": [
-            "tests/xfilepos/xfilepos_002.c"
+        "name":"boolasgn_e03 : NO FALSE POSITIVE",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e03.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "xfilepos_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/xfilepos/xfilepos_e01.c"
+        "name":"boolasgn_e04 : NO FALSE POSITIVE",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e04.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "libuse_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/libuse/libuse_e01.c"
+        "name":"boolasgn_e05 : NO FALSE POSITIVE",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e05.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "libuse_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/libuse/libuse_e02.c"
+        "name":"boolasgn_e06 : NO UB",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e06.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "libuse_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/libuse/libuse_e03.c"
+        "name":"boolasgn_e07 : NO FALSE POSITIVE",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e07.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "chreof_e01",
-        "prefix_path": "..",
-        "files": [
+        "name":"chreof_e01",
+        "prefix_path":"..",
+        "files":[
             "tests/chreof/chreof_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "chreof_e02",
-        "prefix_path": "..",
-        "files": [
+        "name":"chreof_e02",
+        "prefix_path":"..",
+        "files":[
             "tests/chreof/chreof_e02.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e01",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e01.c"
+        "name":"chrsgnext_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/chrsgnext/chrsgnext_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e03",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e03.c"
+        "name":"dblfree_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/dblfree/dblfree_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e05",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e05.c"
+        "name":"dblfree_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/dblfree/dblfree_e02.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e07",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e07.c"
+        "name":"diverr_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/diverr/diverr_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e09",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e09.c"
+        "name":"diverr_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/diverr/diverr_e02.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e02",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e02.c"
+        "name":"diverr_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/diverr/diverr_e03.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e04",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e04.c"
+        "name":"diverr_e04",
+        "prefix_path":"..",
+        "files":[
+            "tests/diverr/diverr_e04.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e06",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e06.c"
+        "name":"fileclose_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/fileclose/fileclose_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "resident_e08",
-        "prefix_path": "..",
-        "files": [
-            "tests/resident/resident_e08.c"
+        "name":"fileclose_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/fileclose/fileclose_e02.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "invfmtstr_002",
-        "prefix_path": "..",
-        "files": [
+        "name":"filecpy_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/filecpy/filecpy_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_e01a",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e01a.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_e01b",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e01b.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_e02a",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e02a.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_e02b",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e02b.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_e03a",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e03a.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_e03b",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e03b.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_e04a",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e04a.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_e04b",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e04b.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_ex1a",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_ex1a.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"funcdecl_ex1b",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_ex1b.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"intoflow_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/intoflow/intoflow_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"intoflow_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/intoflow/intoflow_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"intptrconv_005",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_005.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"intptrconv_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"intptrconv_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"intptrconv_ex1",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_ex1.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"intptrconv_ex2",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_ex2.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"inverrno_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/inverrno/inverrno_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"inverrno_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/inverrno/inverrno_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"inverrno_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/inverrno/inverrno_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invfmtstr_002",
+        "prefix_path":"..",
+        "files":[
             "tests/invfmtstr/invfmtstr_002.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "invfmtstr_e01",
-        "prefix_path": "..",
-        "files": [
+        "name":"invfmtstr_e01",
+        "prefix_path":"..",
+        "files":[
             "tests/invfmtstr/invfmtstr_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "taintsink_e01",
-        "prefix_path": "..",
-        "files": [
+        "name":"invptr_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e04",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e04.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e05",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e05.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e06",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e06.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e07",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e07.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e08",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e08.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e09",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e09.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e10",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e10.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e11",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e11.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"invptr_e12",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e12.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"ioileave_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/ioileave/ioileave_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"liberr_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/liberr/liberr_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"liberr_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/liberr/liberr_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"liberr_ex1",
+        "prefix_path":"..",
+        "files":[
+            "tests/liberr/liberr_ex1.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"liberr_ex2",
+        "prefix_path":"..",
+        "files":[
+            "tests/liberr/liberr_ex2.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libmod_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/libmod/libmod_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libmod_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/libmod/libmod_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libmod_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/libmod/libmod_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libmod_e04",
+        "prefix_path":"..",
+        "files":[
+            "tests/libmod/libmod_e04.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libptr_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/libptr/libptr_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libptr_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/libptr/libptr_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libptr_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/libptr/libptr_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libptr_e04",
+        "prefix_path":"..",
+        "files":[
+            "tests/libptr/libptr_e04.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libptr_e05",
+        "prefix_path":"..",
+        "files":[
+            "tests/libptr/libptr_e05.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libuse_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/libuse/libuse_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libuse_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/libuse/libuse_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"libuse_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/libuse/libuse_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"nonnullstr_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"nonnullstr_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"nonnullstr_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"nullref_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/nullref/nullref_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"padcomp_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/padcomp/padcomp_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"ptrcomp_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrcomp/ptrcomp_e01.c"
+        ],
+        "main":"main",
+        "sa":true
+    },
+    {
+        "name":"ptrobj_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrobj/ptrobj_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"ptrobj_ex1",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrobj/ptrobj_ex1.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"ptrobj_ex2",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrobj/ptrobj_ex2.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e04",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e04.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e05",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e05.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e06",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e06.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e07",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e07.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e08",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e08.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"resident_e09",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e09.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"restrict_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/restrict/restrict_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"restrict_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/restrict/restrict_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"sigcall_e01 : SKIP - CONCURRENT - SIGNALS",
+        "prefix_path":"..",
+        "files":[
+            "tests/sigcall/sigcall_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"signconv_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/signconv/signconv_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"sizeofptr_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/sizeofptr/sizeofptr_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"strmod_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"strmod_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"strmod_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"strmod_e04",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e04.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"strmod_e05",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e05.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"strmod_e06",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e06.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"swtchdflt_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/swtchdflt/swtchdflt_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"syscall_e01 : SKIP : system()",
+        "prefix_path":"..",
+        "files":[
+            "tests/syscall/syscall_e01.c"
+        ],
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"tis-mkfs-stdin",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"syscall_e02 : SKIP : system()",
+        "prefix_path":"..",
+        "files":[
+            "tests/syscall/syscall_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"taintformatio_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintformatio/taintformatio_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"taintformatio_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintformatio/taintformatio_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"taintnoproto_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintnoproto/taintnoproto_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"taintsink_e01",
+        "prefix_path":"..",
+        "files":[
             "tests/taintsink/taintsink_e01.c"
         ],
-        "main": "main"
+        "main":"main"
     },
     {
-        "name": "taintsink_e02",
-        "prefix_path": "..",
-        "files": [
+        "name":"taintsink_e02",
+        "prefix_path":"..",
+        "files":[
             "tests/taintsink/taintsink_e02.c"
         ],
-        "main": "main"
+        "main":"main"
+    },
+    {
+        "name":"taintstrcpy_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintstrcpy/taintstrcpy_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"uninitref_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/uninitref/uninitref_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"uninitref_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/uninitref/uninitref_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"uninitref_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/uninitref/uninitref_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"uninitref_e04",
+        "prefix_path":"..",
+        "files":[
+            "tests/uninitref/uninitref_e04.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"usrfmt_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/usrfmt/usrfmt_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"usrfmt_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/usrfmt/usrfmt_e02.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"usrfmt_e03",
+        "prefix_path":"..",
+        "files":[
+            "tests/usrfmt/usrfmt_e03.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"usrfmt_e04",
+        "prefix_path":"..",
+        "files":[
+            "tests/usrfmt/usrfmt_e04.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"xfilepos_002",
+        "prefix_path":"..",
+        "files":[
+            "tests/xfilepos/xfilepos_002.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"xfilepos_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/xfilepos/xfilepos_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"xfree_e01",
+        "prefix_path":"..",
+        "files":[
+            "tests/xfree/xfree_e01.c"
+        ],
+        "main":"main"
+    },
+    {
+        "name":"xfree_e02",
+        "prefix_path":"..",
+        "files":[
+            "tests/xfree/xfree_e02.c"
+        ],
+        "main":"main"
     }
 ]
