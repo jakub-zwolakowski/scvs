@@ -1,0 +1,7 @@
+[
+    {
+        "name": "ptrcomp 01",
+        "files": [ "tests/ptrcomp/ptrcomp_e01.c" ],
+        "main": "main"
+    }
+]
