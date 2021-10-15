@@ -57,7 +57,7 @@
         "main":"main"
     },
     {
-        "name":"alignconv_e01 : SKIP : ADDRESS ALIGNMENT",
+        "name":"alignconv_e01 : CHECK : ADDRESS ALIGNMENT",
         "prefix_path":"..",
         "files":[
             "tests/alignconv/alignconv_e01.c"
@@ -65,7 +65,7 @@
         "main":"main"
     },
     {
-        "name":"alignconv_e02 : SKIP : ADDRESS ALIGNMENT",
+        "name":"alignconv_e02 : CHECK : ADDRESS ALIGNMENT",
         "prefix_path":"..",
         "files":[
             "tests/alignconv/alignconv_e02.c"
