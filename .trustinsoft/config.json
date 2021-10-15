@@ -395,7 +395,7 @@
         "name":"intptrconv_005",
         "prefix_path":"..",
         "files":[
-            "tests/intptrconv/intptrconv_005.c"
+            "tests/intptrconv/intptrconv_005.c : CHECK : MISPLACED UB?"
         ],
         "main":"main"
     },
@@ -403,7 +403,7 @@
         "name":"intptrconv_e01",
         "prefix_path":"..",
         "files":[
-            "tests/intptrconv/intptrconv_e01.c"
+            "tests/intptrconv/intptrconv_e01.c : CHECK : MISPLACED UB?"
         ],
         "main":"main"
     },
@@ -411,12 +411,12 @@
         "name":"intptrconv_e02",
         "prefix_path":"..",
         "files":[
-            "tests/intptrconv/intptrconv_e02.c"
+            "tests/intptrconv/intptrconv_e02.c : CHECK (NO UB?)"
         ],
         "main":"main"
     },
     {
-        "name":"intptrconv_ex1",
+        "name":"intptrconv_ex1 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_ex1.c"
@@ -424,7 +424,7 @@
         "main":"main"
     },
     {
-        "name":"intptrconv_ex2",
+        "name":"intptrconv_ex2 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_ex2.c"
@@ -472,7 +472,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e01",
+        "name":"invptr_e01 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e01.c"
@@ -480,7 +480,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e02",
+        "name":"invptr_e02 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e02.c"
@@ -488,7 +488,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e03",
+        "name":"invptr_e03 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e03.c"
@@ -496,7 +496,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e04",
+        "name":"invptr_e04 : CHECK : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e04.c"
@@ -504,7 +504,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e05",
+        "name":"invptr_e05 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e05.c"
@@ -512,7 +512,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e06",
+        "name":"invptr_e06 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e06.c"
@@ -520,7 +520,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e07",
+        "name":"invptr_e07 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e07.c"
@@ -528,7 +528,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e08",
+        "name":"invptr_e08 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e08.c"
@@ -536,7 +536,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e09",
+        "name":"invptr_e09 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e09.c"
@@ -544,7 +544,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e10",
+        "name":"invptr_e10 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e10.c"
@@ -552,7 +552,7 @@
         "main":"main"
     },
     {
-        "name":"invptr_e11",
+        "name":"invptr_e11 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e11.c"
@@ -560,12 +560,24 @@
         "main":"main"
     },
     {
-        "name":"invptr_e12",
+        "name":"invptr_e12 : TODO",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e12.c"
         ],
-        "main":"main"
+        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100,
+        "filesystem":{
+            "files":[
+                {
+                    "name":"scvs_testfile.txt",
+                    "size": 100,
+                    "min_val": 0,
+                    "max_val": 255
+                }
+            ]
+        }
     },
     {
         "name":"ioileave_e01",
