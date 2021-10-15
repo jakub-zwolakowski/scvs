@@ -5,7 +5,8 @@
         "files": [
             "tests/ptrcomp/ptrcomp_e01.c"
         ],
-        "main": "main"
+        "main": "main",
+        "sa": true
     },
     {
         "name": "accfree_e01",
