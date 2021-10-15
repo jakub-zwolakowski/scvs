@@ -1,0 +1,1245 @@
+[
+    {
+        "name":"accfree_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/accfree/accfree_e01.c"
+        ]
+    },
+    {
+        "name":"accfree_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/accfree/accfree_e02.c"
+        ],
+        "val-args":" 42"
+    },
+    {
+        "name":"accfree_e03 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "prefix_path":"..",
+        "files":[
+            "tests/accfree/accfree_e03.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"accfree_e03 : CORRECTED VERSION : NO UB",
+        "prefix_path":"..",
+        "files":[
+            "tests/accfree/accfree_e03_corrected.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },    {
+        "name":"accfree_e03 : VERSION WITH size = 0 : UB detected",
+        "prefix_path":"..",
+        "files":[
+            "tests/accfree/accfree_e03_size_zero.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"accsig_e01 : OUT OF SCOPE (signals)",
+        "prefix_path":"..",
+        "files":[
+            "tests/accsig/accsig_e01.c"
+        ]
+    },
+    {
+        "name":"addrescape_e01 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "prefix_path":"..",
+        "files":[
+            "tests/addrescape/addrescape_e01.c"
+        ]
+    },
+    {
+        "name":"addrescape_e02 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "prefix_path":"..",
+        "files":[
+            "tests/addrescape/addrescape_e02.c"
+        ]
+    },
+    {
+        "name":"addrescape_e03 : NO UB (escaping address not used)",
+        "prefix_path":"..",
+        "files":[
+            "tests/addrescape/addrescape_e03.c"
+        ]
+    },
+    {
+        "name":"alignconv_e01 : NOT IMPLEMENTED YET (pointer alignment)",
+        "prefix_path":"..",
+        "files":[
+            "tests/alignconv/alignconv_e01.c"
+        ]
+    },
+    {
+        "name":"alignconv_e02 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/alignconv/alignconv_e02.c"
+        ]
+    },
+    {
+        "name":"argcomp_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/argcomp/argcomp_e01.c"
+        ]
+    },
+    {
+        "name":"argcomp_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/argcomp/argcomp_e02a.c",
+            "tests/argcomp/argcomp_e02b.c"
+        ]
+    },
+    {
+        "name":"argcomp_e03 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/argcomp/argcomp_e03a.c",
+            "tests/argcomp/argcomp_e03b.c"
+        ]
+    },
+    {
+        "name":"argcomp_e04 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/argcomp/argcomp_e04a.c",
+            "tests/argcomp/argcomp_e04b.c"
+        ]
+    },
+    {
+        "name":"asyncsig_e01 : OUT OF SCOPE (signals)",
+        "prefix_path":"..",
+        "files":[
+            "tests/asyncsig/asyncsig_e01.c"
+        ]
+    },
+    {
+        "name":"asyncsig_e02 : OUT OF SCOPE (signals)",
+        "prefix_path":"..",
+        "files":[
+            "tests/asyncsig/asyncsig_e02.c"
+        ]
+    },
+    {
+        "name":"asyncsig_e03 : OUT OF SCOPE (signals)",
+        "prefix_path":"..",
+        "files":[
+            "tests/asyncsig/asyncsig_e03.c"
+        ]
+    },
+    {
+        "name":"boolasgn_e01 : NO UB (infinite loop)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e01.c"
+        ],
+        "val-timeout":30
+    },
+    {
+        "name":"boolasgn_e01 : NO UB (infinite loop)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"boolasgn_e02 : NO UB (infinite loop)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e02.c"
+        ],
+        "cpp-extra-args":[
+            "-DTIS_DETERMINISTIC_LIBC"
+        ],
+        "val-timeout":30
+    },
+    {
+        "name":"boolasgn_e02 : NO UB (infinite loop)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100,
+        "cpp-extra-args":[
+            "-DTIS_DETERMINISTIC_LIBC"
+        ],
+        "val-timeout":30
+    },
+    {
+        "name":"boolasgn_e03 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e03.c"
+        ]
+    },
+    {
+        "name":"boolasgn_e04 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e04.c"
+        ]
+    },
+    {
+        "name":"boolasgn_e05 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e05.c"
+        ]
+    },
+    {
+        "name":"boolasgn_e06 : NO UB",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e06.c"
+        ]
+    },
+    {
+        "name":"boolasgn_e07 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e07.c"
+        ]
+    },
+    {
+        "name":"chreof_e01 : NO UB (storing results of 'getchar()' in a 'char' is not Undefined Behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/chreof/chreof_e01.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"tis-mkfs-stdin",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"chreof_e02 : NO UB (storing results of 'getwc()' in a 'wchar_t' is not Undefined Behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/chreof/chreof_e02.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"tis-mkfs-stdin",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"chrsgnext_e01 : NO UB (all the invocations of 'isspace()' are valid)",
+        "prefix_path":"..",
+        "files":[
+            "tests/chrsgnext/chrsgnext_e01.c"
+        ]
+    },
+    {
+        "name":"chrsgnext_e01 MODIFIED : ADDED AN INVALID CALL TO 'isspace()'",
+        "prefix_path":"..",
+        "files":[
+            "tests/chrsgnext/chrsgnext_e01_invalid_argument.c"
+        ]
+    },
+    {
+        "name":"dblfree_e01 : NO UB ('free(NULL)' does nothing - we can repeat it as many times as we want)",
+        "prefix_path":"..",
+        "files":[
+            "tests/dblfree/dblfree_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"dblfree_e02 : NO UB (no double free happening in any possible program execution",
+        "prefix_path":"..",
+        "files":[
+            "tests/dblfree/dblfree_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"diverr_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/diverr/diverr_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"diverr_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/diverr/diverr_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"diverr_e03 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/diverr/diverr_e03.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"diverr_e04 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/diverr/diverr_e04.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"fileclose_e01 : NO UB (not closing a file is not Undefined Behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/fileclose/fileclose_e01.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"mydata.dat"
+                }
+            ]
+        }
+    },
+    {
+        "name":"fileclose_e02 : NO UB (resource leak is not Undefined Behavior), STILL: DETECTED IN THE LOG",
+        "prefix_path":"..",
+        "files":[
+            "tests/fileclose/fileclose_e02.c"
+        ]
+    },
+    {
+        "name":"filecpy_e01 : NO UB (not sure though!)",
+        "prefix_path":"..",
+        "files":[
+            "tests/filecpy/filecpy_e01.c"
+        ]
+    },
+    {
+        "name":"funcdecl_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e01a.c",
+            "tests/funcdecl/funcdecl_e01b.c"
+        ]
+    },
+    {
+        "name":"funcdecl_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e02a.c",
+            "tests/funcdecl/funcdecl_e02b.c"
+        ]
+    },
+    {
+        "name":"funcdecl_e03 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e03a.c",
+            "tests/funcdecl/funcdecl_e03b.c"
+        ]
+    },
+    {
+        "name":"funcdecl_e04 : OUT OF SCOPE",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_e04a.c",
+            "tests/funcdecl/funcdecl_e04b.c"
+        ],
+        "cpp-extra-args":[
+            "-Itests/funcdecl"
+        ]
+    },
+    {
+        "name":"funcdecl_ex1 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/funcdecl/funcdecl_ex1a.c",
+            "tests/funcdecl/funcdecl_ex1b.c"
+        ]
+    },
+    {
+        "name":"intoflow_e01 : NO UB (TYPO? There cannot be a signed overflow on an 'unsigned int' value.)",
+        "prefix_path":"..",
+        "files":[
+            "tests/intoflow/intoflow_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"intoflow_e01 : CORRECTED VERSION : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/intoflow/intoflow_e01_corrected.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"intoflow_e02 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/intoflow/intoflow_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"intptrconv_005 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_005.c"
+        ]
+    },
+    {
+        "name":"intptrconv_e01 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_e01.c"
+        ]
+    },
+    {
+        "name":"intptrconv_e02 : NO UB (pointer created, but not used)",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_e02.c"
+        ]
+    },
+    {
+        "name":"intptrconv_ex1 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_ex1.c"
+        ]
+    },
+    {
+        "name":"intptrconv_ex2 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/intptrconv/intptrconv_ex2.c"
+        ]
+    },
+    {
+        "name":"inverrno_e01 : NO UB (not using the standard 'errno' coding pattern when calling a library function is not Undefined Behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/inverrno/inverrno_e01.c"
+        ]
+    },
+    {
+        "name":"inverrno_e02 : NO UB (not using the standard 'errno' coding pattern when calling a library function is not Undefined Behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/inverrno/inverrno_e02.c"
+        ]
+    },
+    {
+        "name":"inverrno_e03 : NO UB (not using the standard 'errno' coding pattern when calling a library function is not Undefined Behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/inverrno/inverrno_e03.c"
+        ]
+    },
+    {
+        "name":"invfmtstr_002 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invfmtstr/invfmtstr_002.c"
+        ]
+    },
+    {
+        "name":"invfmtstr_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invfmtstr/invfmtstr_e01.c"
+        ]
+    },
+    {
+        "name":"invptr_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e01.c"
+        ]
+    },
+    {
+        "name":"invptr_e02 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e02.c"
+        ]
+    },
+    {
+        "name":"invptr_e03 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e03.c"
+        ]
+    },
+    {
+        "name":"invptr_e04 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e04.c"
+        ]
+    },
+    {
+        "name":"invptr_e04 : VERSION WITH abstract string 'str' : OK (found the UB)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e04_abstract.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"invptr_e05 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e05.c"
+        ]
+    },
+    {
+        "name":"invptr_e06 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e06.c"
+        ]
+    },
+    {
+        "name":"invptr_e07 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e07.c"
+        ]
+    },
+    {
+        "name":"invptr_e08 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e08.c"
+        ]
+    },
+    {
+        "name":"invptr_e09 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e09.c"
+        ]
+    },
+    {
+        "name":"invptr_e10 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e10.c"
+        ]
+    },
+    {
+        "name":"invptr_e11 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e11.c"
+        ]
+    },
+    {
+        "name":"invptr_e12 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e12.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000,
+        "filesystem":{
+            "system_errors": false,
+            "files":[
+                {
+                    "name":"scvs_testfile.txt",
+                    "size": 3,
+                    "min_val": 0,
+                    "max_val": 255
+                }
+            ]
+        }
+    },
+    {
+        "name":"ioileave_e01 : NIY (interleaving reads and writes to a file)",
+        "prefix_path":"..",
+        "files":[
+            "tests/ioileave/ioileave_e01.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"liberr_e01 : CHECK",
+        "prefix_path":"..",
+        "files":[
+            "tests/liberr/liberr_e01.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
+        /*
+        "val-profile":"analyzer",
+        "slevel":1000,
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "size": 10000,
+                    "min_val": 0,
+                    "max_val": 255
+                }
+            ]
+        },
+        "val-stop-at-nth-alarm": 3
+        */
+    },
+    {
+        "name":"liberr_e02 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/liberr/liberr_e02.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"liberr_ex1 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/liberr/liberr_ex1.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"liberr_ex2 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/liberr/liberr_ex2.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"libmod_e01 : NIY (modifying the string returned from setlocale)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libmod/libmod_e01.c"
+        ]
+    },
+    {
+        "name":"libmod_e02 : NIY (modifying the string returned from localeconv)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libmod/libmod_e02.c"
+        ]
+    },
+    {
+        "name":"libmod_e03 : NIY (modifying the string returned from getenv)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libmod/libmod_e03.c"
+        ]
+    },
+    {
+        "name":"libmod_e04 : NIY (modifying the string returned from strerror)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libmod/libmod_e04.c"
+        ]
+    },
+    {
+        "name":"libptr_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libptr/libptr_e01.c"
+        ]
+    },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"aarch64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"aarch64eb" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE apple_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"apple_ppc_32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"arm_eabi" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"armeb_eabi" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_aarch64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_aarch64eb" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_arm_eabi" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_armeb_eabi" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mips_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mips_n32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mips_o32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mipsel_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mipsel_n32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mipsel_o32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_ppc_32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_ppc_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_rv32ifdq" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_rv64ifdq" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_sparc_32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_sparc_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_x86_16" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_x86_16_huge" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_x86_32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE gcc_x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_x86_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mips_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mips_n32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mips_o32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mipsel_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mipsel_n32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mipsel_o32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"ppc_32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"ppc_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"rv32ifdq" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"rv64ifdq" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"sparc_32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"sparc_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_16" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_16_huge" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_64" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE x86_win32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_win32" },
+    { "name":"libptr_e02 : NO UB : ARCHITECTURE x86_win64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_win64" },
+    {
+        "name":"libptr_e03 : NO UB (unexpected behavior)",
+        "prefix_path":"..",
+        "files":[ "tests/libptr/libptr_e03.c" ]
+    },
+    {
+        "name":"libptr_e04 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libptr/libptr_e04.c"
+        ]
+    },
+    {
+        "name":"libptr_e05 : NO UB (unexpected behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libptr/libptr_e05.c"
+        ]
+    },
+    {
+        "name":"libuse_e01 : NIY (invalid getenv() result access)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libuse/libuse_e01.c"
+        ]
+    },
+    {
+        "name":"libuse_e02 : NIY (invalid setlocale() result access)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libuse/libuse_e02.c"
+        ]
+    },
+    {
+        "name":"libuse_e03 : NIY (invalid strerror() result access)",
+        "prefix_path":"..",
+        "files":[
+            "tests/libuse/libuse_e03.c"
+        ]
+    },
+    {
+        "name":"nonnullstr_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e01.c"
+        ]
+    },
+    {
+        "name":"nonnullstr_e02 : MISPLACED 'REQUIRED DIAGNOSTIC' (reading uninitialized memory)",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e02.c"
+        ]
+    },    {
+        "name":"nonnullstr_e02 : VERSION WITH initialized string : UB detected",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e02.c"
+        ]
+    },
+    {
+        "name":"nonnullstr_e03 : UB (reading uninitialized memory)",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e03.c"
+        ]
+    },
+    {
+        "name":"nonnullstr_e03 : VERSION WITH initialized string : no false positive",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e03_string_initialized.c"
+        ]
+    },
+    {
+        "name":"nullref_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/nullref/nullref_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"padcomp_e01 : NO UB (padding zero-initialized, identical prefix)",
+        "prefix_path":"..",
+        "files":[
+            "tests/padcomp/padcomp_e01.c"
+        ]
+    },    {
+        "name":"padcomp_e01 : CORRECTED VERSION : UB detected",
+        "prefix_path":"..",
+        "files":[
+            "tests/padcomp/padcomp_e01_corrected.c"
+        ]
+    },
+    {
+        "name":"ptrcomp_e01 : OK (UB detected in the log)",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrcomp/ptrcomp_e01.c"
+        ],
+        "sa":true
+    },
+    {
+        "name":"ptrobj_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrobj/ptrobj_e01.c"
+        ]
+    },
+    {
+        "name":"ptrobj_ex1 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrobj/ptrobj_ex1.c"
+        ]
+    },
+    {
+        "name":"ptrobj_ex2 : TYPO! (there is a typo in the example - 'subrtact')",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrobj/ptrobj_ex2.c"
+        ]
+    },
+    {
+        "name":"ptrobj_ex2 : CORRECTED VERSION : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrobj/ptrobj_ex2_corrected.c"
+        ]
+    },
+    {
+        "name":"resident_e01 : NIY (defining reserved identifier errno)",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e01.c"
+        ]
+    },
+    {
+        "name":"resident_e02 : NIY (defining reserved symbol _RESIDENT_HEADER_H)",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e02.c"
+        ]
+    },
+    {
+        "name":"resident_e03 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e03.c"
+        ]
+    },
+    {
+        "name":"resident_e04 : NIY (defining reserved file scope identifier _limit)",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e04.c"
+        ]
+    },
+    {
+        "name":"resident_e05 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e05.c"
+        ]
+    },
+    {
+        "name":"resident_e06 : PARTLY OK (detected reusing identifier SIZE_MAX), NIY (defining reserved identifier INTFAST16_LIMIT_MAX)",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e06.c"
+        ]
+    },
+    {
+        "name":"resident_e07 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e07.c"
+        ]
+    },
+    {
+        "name":"resident_e08 : NIY (defining reserved identifiers 'malloc()' and 'free()')",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e08.c"
+        ]
+    },
+    {
+        "name":"resident_e09 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/resident/resident_e09.c"
+        ]
+    },
+    {
+        "name":"restrict_e01 : NO UB (the memory zones passed to memcpy do not overlap)",
+        "prefix_path":"..",
+        "files":[
+            "tests/restrict/restrict_e01.c"
+        ]
+    },
+    {
+        "name":"restrict_e01 : CORRECTED VERSION : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/restrict/restrict_e01_corrected.c"
+        ]
+    },
+    {
+        "name":"restrict_e02 : NIY (qualifier 'restrict')",
+        "prefix_path":"..",
+        "files":[
+            "tests/restrict/restrict_e02.c"
+        ]
+    },
+    {
+        "name":"sigcall_e01 : OUT OF SCOPE (signals)",
+        "prefix_path":"..",
+        "files":[
+            "tests/sigcall/sigcall_e01.c"
+        ]
+    },
+    {
+        "name":"signconv_e01 : NO UB",
+        "prefix_path":"..",
+        "files":[
+            "tests/signconv/signconv_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel": 10000
+    },
+    {
+        "name":"sizeofptr_e01 : NO UB (unexpected behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/sizeofptr/sizeofptr_e01.c"
+        ]
+    },
+    {
+        "name":"strmod_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e01.c"
+        ]
+    },
+    {
+        "name":"strmod_e02 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e02.c"
+        ]
+    },
+    {
+        "name":"strmod_e03 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e03.c"
+        ]
+    },
+    {
+        "name":"strmod_e04 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e04.c"
+        ]
+    },
+    {
+        "name":"strmod_e05 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e05.c"
+        ]
+    },
+    {
+        "name":"strmod_e06 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/strmod/strmod_e06.c"
+        ]
+    },
+    {
+        "name":"swtchdflt_e01 : NO UB (non-exhaustive switch is not Undefined Behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/swtchdflt/swtchdflt_e01.c"
+        ]
+    },
+    {
+        "name":"syscall_e01 : OUT OF SCOPE",
+        "prefix_path":"..",
+        "files":[
+            "tests/syscall/syscall_e01.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"tis-mkfs-stdin",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"syscall_e02 : OUT OF SCOPE",
+        "prefix_path":"..",
+        "files":[
+            "tests/syscall/syscall_e02.c"
+        ]
+    },
+    {
+        "name":"taintformatio_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintformatio/taintformatio_e01.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"tis-mkfs-stdin",
+                    "size":128,
+                    "min_val":42,
+                    "max_val":42
+                }
+            ]
+        }
+    },
+    {
+        "name":"taintformatio_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintformatio/taintformatio_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000
+    },
+    {
+        "name":"taintnoproto_e01 : NO UB (unexpected behavior)",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintnoproto/taintnoproto_e01.c"
+        ]
+    },
+    {
+        "name":"taintsink_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintsink/taintsink_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000
+    },
+    {
+        "name":"taintsink_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintsink/taintsink_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000
+    },
+    {
+        "name":"taintstrcpy_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/taintstrcpy/taintstrcpy_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000
+    },
+    {
+        "name":"uninitref_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/uninitref/uninitref_e01.c"
+        ]
+    },
+    {
+        "name":"uninitref_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/uninitref/uninitref_e02.c"
+        ]
+    },
+    {
+        "name":"uninitref_e03 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/uninitref/uninitref_e03.c"
+        ]
+    },
+    {
+        "name":"uninitref_e04 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "prefix_path":"..",
+        "files":[
+            "tests/uninitref/uninitref_e04.c"
+        ]
+    },
+    {
+        "name":"usrfmt_e01 : OK (UB detected)", 
+        "prefix_path":"..",
+        "files":[
+            "tests/usrfmt/usrfmt_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100,
+        "filesystem":{
+            "system_errors":false,
+            "files":[
+                {
+                    "name":"catalog"
+                }
+            ]
+        }
+    },
+    {
+        "name":"usrfmt_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/usrfmt/usrfmt_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100,
+        "filesystem":{
+            "system_errors":false,
+            "files":[
+                {
+                    "name":"catalog"
+                }
+            ]
+        }
+    },
+    {
+        "name":"usrfmt_e03 : OK (UB detected), NOTE: there is more than one problem here",
+        "prefix_path":"..",
+        "files":[
+            "tests/usrfmt/usrfmt_e03.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":1000
+    },
+    {
+        "name":"usrfmt_e04 : OK (no false positive)",
+        "prefix_path":"..",
+        "files":[
+            "tests/usrfmt/usrfmt_e04.c"
+        ]
+    },
+    {
+        "name":"xfilepos_002 : NIY (checking if 'fsetpos' argument always comes from 'fgetpos')",
+        "prefix_path":"..",
+        "files":[
+            "tests/xfilepos/xfilepos_002.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"xfilepos_e01 : NIY (checking if 'fsetpos' argument always comes from 'fgetpos')",
+        "prefix_path":"..",
+        "files":[
+            "tests/xfilepos/xfilepos_e01.c"
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
+    },
+    {
+        "name":"xfree_e01 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/xfree/xfree_e01.c"
+        ]
+    },
+    {
+        "name":"xfree_e02 : OK (UB detected)",
+        "prefix_path":"..",
+        "files":[
+            "tests/xfree/xfree_e02.c"
+        ]
+    }
+]

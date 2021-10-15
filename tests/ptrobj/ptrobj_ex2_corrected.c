@@ -1,4 +1,4 @@
-/*	Rule: fileclose	Test File: fileclose_e02.c
+/*	Rule: ptrobj	Test File: ptrobj_ex2.c
  *
  * Copyright (c) 2012 Carnegie Mellon University.
  * All Rights Reserved.
@@ -49,45 +49,42 @@
  *  SECRETS.”
  * 
  *
- * Rule: [fileclose]
- * Description: diagnostic is required because the resource allocated by 
- *              the call to malloc() is not freed
- * Diagnostic: required on line 78
+ * Rule: [ptrobj]
+ * Description: diagnostic is not required because subtracting two 
+                pointers to char within the same object does not need 
+                to be diagnosed
+ * Diagnostic: None
  * Additional Test Files: None
  * Command-line Options: None
  */
 
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
-#ifdef __TRUSTINSOFT_ANALYZER__
-#include <tis_builtin.h>
-#endif
+#include <stdlib.h>
 
-int fun(void);
+int subtract_char_ptrs(void *, void *);
 
 int main(void) {
+ char s[] = "Test String";
+ char *cptr1 = s;
+ char *cptr2 = s + 4;
 
-  if(fun() == 1) {
-  /* ... */
-  } else {
-   return EXIT_FAILURE;
-  }
- 
-#ifdef __TRUSTINSOFT_ANALYZER__
-  tis_check_leak();
-#endif
-  return EXIT_SUCCESS;
+ while ((subtract_char_ptrs(cptr1, cptr2) != 0) && *cptr1 != '\0') {
+  printf("%c", *cptr1++);
+ }
+ printf("\n");
+
 }
 
-int fun(void) {
-  char *text_buffer = (char *)malloc(BUFSIZ); // diagnostic required
- 
-  if (text_buffer == NULL) {
+int subtract_char_ptrs(void *v1, void *v2) {
+  char *s1 = (char *)v1;
+  char *s2 = (char *)v2;
+
+  if ((*s1 - *s2) > 0) {
+    return 1;
+  } else if ((*s1 - *s2) < 0)  {
+    return -1;
+  } else {
     return 0;
-  } else {
-    memset(text_buffer, 9, (BUFSIZ / 2));
   }
-  return 1;
 }
-
+ 

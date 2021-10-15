@@ -1,4 +1,4 @@
-/*	Rule: fileclose	Test File: fileclose_e02.c
+/*	Rule: chrsgnext	Test File: chrsgnext_e01.c
  *
  * Copyright (c) 2012 Carnegie Mellon University.
  * All Rights Reserved.
@@ -49,10 +49,10 @@
  *  SECRETS.”
  * 
  *
- * Rule: [fileclose]
- * Description: diagnostic is required because the resource allocated by 
- *              the call to malloc() is not freed
- * Diagnostic: required on line 78
+ * Rule: [chrsgnext]
+ * Description: diagnostic is required because the parameter to isspace() 
+ *              may not be representable as an unsigned char
+ * Diagnostic: required on line 80
  * Additional Test Files: None
  * Command-line Options: None
  */
@@ -60,34 +60,28 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#ifdef __TRUSTINSOFT_ANALYZER__
-#include <tis_builtin.h>
-#endif
+#include <stddef.h>
+#include <ctype.h>
 
-int fun(void);
+ptrdiff_t count_whitespaces(const char *);
 
 int main(void) {
+  const char *cc = "   Now is the time to test it!";
 
-  if(fun() == 1) {
-  /* ... */
-  } else {
-   return EXIT_FAILURE;
-  }
- 
-#ifdef __TRUSTINSOFT_ANALYZER__
-  tis_check_leak();
-#endif
+  printf("leading spaces in the string %td\n", count_whitespaces(cc));
+
+  isspace(-2); // TIS: added an invalid call to isspace()
+
   return EXIT_SUCCESS;
 }
 
-int fun(void) {
-  char *text_buffer = (char *)malloc(BUFSIZ); // diagnostic required
- 
-  if (text_buffer == NULL) {
-    return 0;
-  } else {
-    memset(text_buffer, 9, (BUFSIZ / 2));
+ptrdiff_t count_whitespaces(const char *s) {
+  const char *t = s;
+  size_t length = strlen(s) + 1;
+
+  while (isspace(*t) && (t - s < length)) {  // diagnostic required
+    ++t;
   }
-  return 1;
+  return t - s;
 }
 

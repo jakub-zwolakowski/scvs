@@ -1,4 +1,4 @@
-/*	Rule: fileclose	Test File: fileclose_e02.c
+/*	Rule: accfree	Test File: accfree_e03.c
  *
  * Copyright (c) 2012 Carnegie Mellon University.
  * All Rights Reserved.
@@ -49,45 +49,34 @@
  *  SECRETS.”
  * 
  *
- * Rule: [fileclose]
- * Description: diagnostic is required because the resource allocated by 
- *              the call to malloc() is not freed
+ * Rule: [accfree]
+ * Description: diagnostic is required because realloc may free c_str1 
+ *              when it returns NULL, resulting in c_str1 being freed 
+ *              twice.
  * Diagnostic: required on line 78
  * Additional Test Files: None
  * Command-line Options: None
  */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#ifdef __TRUSTINSOFT_ANALYZER__
-#include <tis_builtin.h>
-#endif
+#define MAX_LEN 1024
 
-int fun(void);
+#include <stdlib.h>
+#include <string.h>
+
+void f(char *, size_t);
 
 int main(void) {
-
-  if(fun() == 1) {
-  /* ... */
-  } else {
-   return EXIT_FAILURE;
+  char *s = malloc(MAX_LEN);
+  if (s) {
+    f(s, MAX_LEN);
   }
- 
-#ifdef __TRUSTINSOFT_ANALYZER__
-  tis_check_leak();
-#endif
   return EXIT_SUCCESS;
 }
 
-int fun(void) {
-  char *text_buffer = (char *)malloc(BUFSIZ); // diagnostic required
- 
-  if (text_buffer == NULL) {
-    return 0;
-  } else {
-    memset(text_buffer, 9, (BUFSIZ / 2));
+void f(char *c_str1, size_t size) {
+  char *c_str2 = (char *)realloc(c_str1, size);
+  if (c_str2 == NULL) {
+    free(c_str1); // diagnostic required
+    return;
   }
-  return 1;
 }
-

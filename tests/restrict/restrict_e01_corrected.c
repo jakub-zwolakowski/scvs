@@ -1,4 +1,4 @@
-/*	Rule: fileclose	Test File: fileclose_e02.c
+/*	Rule: restrict	Test File: restrict_e01.c
  *
  * Copyright (c) 2012 Carnegie Mellon University.
  * All Rights Reserved.
@@ -49,45 +49,37 @@
  *  SECRETS.”
  * 
  *
- * Rule: [fileclose]
- * Description: diagnostic is required because the resource allocated by 
- *              the call to malloc() is not freed
- * Diagnostic: required on line 78
+ * Rule: [restrict]
+ * Description: diagnostic is required because the restrict-qualified pointer 
+ *              parameters to memcpy(), ptr1 and ptr2, reference overlapping 
+ *              objects
+ * Diagnostic: required on line 79
  * Additional Test Files: None
  * Command-line Options: None
  */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
-#ifdef __TRUSTINSOFT_ANALYZER__
-#include <tis_builtin.h>
-#endif
+#include <stdio.h>
 
-int fun(void);
+int localcpy(void);
 
 int main(void) {
-
-  if(fun() == 1) {
-  /* ... */
+  if(localcpy() > 0) {
+    return EXIT_SUCCESS;
   } else {
-   return EXIT_FAILURE;
+    return EXIT_FAILURE;
   }
- 
-#ifdef __TRUSTINSOFT_ANALYZER__
-  tis_check_leak();
-#endif
-  return EXIT_SUCCESS;
 }
+int localcpy() {
+  char c_str[]= "abc123";
+  char *ptr1 = c_str;
+  char *ptr2 = c_str + strlen("abc") - 1;
 
-int fun(void) {
-  char *text_buffer = (char *)malloc(BUFSIZ); // diagnostic required
- 
-  if (text_buffer == NULL) {
-    return 0;
+  if ((memcpy(ptr2, ptr1, strlen("123"))) != ptr2) {   // diagnostic required
+    return -1;
   } else {
-    memset(text_buffer, 9, (BUFSIZ / 2));
+    return puts(c_str);
   }
-  return 1;
 }
 

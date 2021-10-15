@@ -1,4 +1,4 @@
-/*	Rule: fileclose	Test File: fileclose_e02.c
+/*	Rule: nonnullstr	Test File: nonnullstr_e02.c
  *
  * Copyright (c) 2012 Carnegie Mellon University.
  * All Rights Reserved.
@@ -49,45 +49,56 @@
  *  SECRETS.”
  * 
  *
- * Rule: [fileclose]
- * Description: diagnostic is required because the resource allocated by 
- *              the call to malloc() is not freed
- * Diagnostic: required on line 78
- * Additional Test Files: None
- * Command-line Options: None
+ * Rule: [ptrcomp]
+ * Description: diagnostic is required because the wide string cur_msg 
+ *              will not be null-terminated when passed to wcslen()
+ * Diagnostic: required on line 96
  */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <wchar.h>
 #include <string.h>
-#ifdef __TRUSTINSOFT_ANALYZER__
-#include <tis_builtin.h>
-#endif
 
-int fun(void);
+size_t lessen_memory_usage(wchar_t *, size_t);
+wchar_t *cur_msg = NULL;
+size_t cur_msg_size = 1024;
 
 int main(void) {
-
-  if(fun() == 1) {
-  /* ... */
-  } else {
+ cur_msg = (wchar_t *)malloc(cur_msg_size);
+ if(cur_msg != NULL) {
+   if((lessen_memory_usage(cur_msg, (cur_msg_size / 2 + 1))) != 0) {
+      if(cur_msg) {
+        free(cur_msg);
+      } 
+    } else {
+     return EXIT_FAILURE;
+    }
+ } else {
+   fprintf(stderr, "Could not malloc memmory in %s\n", __func__);
    return EXIT_FAILURE;
-  }
- 
-#ifdef __TRUSTINSOFT_ANALYZER__
-  tis_check_leak();
-#endif
-  return EXIT_SUCCESS;
+ }
+ return EXIT_SUCCESS;
 }
 
-int fun(void) {
-  char *text_buffer = (char *)malloc(BUFSIZ); // diagnostic required
- 
-  if (text_buffer == NULL) {
-    return 0;
-  } else {
-    memset(text_buffer, 9, (BUFSIZ / 2));
+size_t lessen_memory_usage(wchar_t *ws, size_t temp_size) {
+ size_t cur_msg_len = 0;
+ wchar_t *temp;
+
+ if (ws != NULL) {
+  if(temp_size) {
+   temp = realloc(ws, temp_size * sizeof(wchar_t));
+   // temp & cur_msg might not be null-terminated
+   if (temp == NULL) {
+    fprintf(stderr,"could not resize memory in %s\n", __func__);
+   } else {
+    cur_msg = temp;
+    wmemset(cur_msg, L'a', 512);
+    cur_msg_size = temp_size;
+    cur_msg_len = wcslen(cur_msg); // diagnostic required
+   }
   }
-  return 1;
+ }
+ return cur_msg_len;
 }
 
