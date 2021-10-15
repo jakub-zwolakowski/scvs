@@ -36,16 +36,16 @@
 
 #ifdef __TRUSTINSOFT_ANALYZER__
 
-#define GET_TAINTED_INTEGER(type, val) \
-  do { \
-    long tmp; \
+#define GET_TAINTED_INTEGER(type, val)   \
+  do {                                   \
+    long tmp;                            \
     tis_make_unknown(&tmp, sizeof(tmp)); \
-    if (tmp < INT_MIN) { \
-		  tmp = INT_MIN; \
-    } else if (tmp > INT_MAX) { \
-		  tmp = INT_MAX; \
-    }; \
-    val = tmp; \
+    if (tmp < INT_MIN) {                 \
+		  tmp = INT_MIN;                     \
+    } else if (tmp > INT_MAX) {          \
+		  tmp = INT_MAX;                     \
+    };                                   \
+    val = tmp;                           \
   } while (0)
 
 #else
