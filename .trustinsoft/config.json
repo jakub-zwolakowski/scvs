@@ -4,8 +4,7 @@
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"accfree_e02 : OK (UB detected)",
@@ -13,7 +12,6 @@
         "files":[
             "tests/accfree/accfree_e02.c"
         ],
-        "main":"main",
         "val-args":" 42"
     },
     {
@@ -21,64 +19,56 @@
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"accsig_e01 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path":"..",
         "files":[
             "tests/accsig/accsig_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"addrescape_e01 : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"addrescape_e02 : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"addrescape_e03 : NO UB (escaping address not used)",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"alignconv_e01 : NIY (pointer alignment)",
         "prefix_path":"..",
         "files":[
             "tests/alignconv/alignconv_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"alignconv_e02 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/alignconv/alignconv_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"argcomp_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"argcomp_e02 : OK (UB detected)",
@@ -86,8 +76,7 @@
         "files":[
             "tests/argcomp/argcomp_e02a.c",
             "tests/argcomp/argcomp_e02b.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"argcomp_e03 : OK (UB detected)",
@@ -95,8 +84,7 @@
         "files":[
             "tests/argcomp/argcomp_e03a.c",
             "tests/argcomp/argcomp_e03b.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"argcomp_e04 : OK (UB detected)",
@@ -104,32 +92,28 @@
         "files":[
             "tests/argcomp/argcomp_e04a.c",
             "tests/argcomp/argcomp_e04b.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"asyncsig_e01 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path":"..",
         "files":[
             "tests/asyncsig/asyncsig_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"asyncsig_e02 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path":"..",
         "files":[
             "tests/asyncsig/asyncsig_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"asyncsig_e03 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path":"..",
         "files":[
             "tests/asyncsig/asyncsig_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"boolasgn_e01 : NO UB (infinite loop)",
@@ -137,7 +121,6 @@
         "files":[
             "tests/boolasgn/boolasgn_e01.c"
         ],
-        "main":"main",
         "val-timeout":30
     },
     {
@@ -146,7 +129,6 @@
         "files":[
             "tests/boolasgn/boolasgn_e02.c"
         ],
-        "main":"main",
         "cpp-extra-args":[
             "-DTIS_DETERMINISTIC_LIBC"
         ],
@@ -157,40 +139,35 @@
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"boolasgn_e04 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e04.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"boolasgn_e05 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e05.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"boolasgn_e06 : NO UB",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e06.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"boolasgn_e07 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e07.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"chreof_e01 : CHECK",
@@ -198,7 +175,6 @@
         "files":[
             "tests/chreof/chreof_e01.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -214,7 +190,6 @@
         "files":[
             "tests/chreof/chreof_e02.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -229,8 +204,7 @@
         "prefix_path":"..",
         "files":[
             "tests/chrsgnext/chrsgnext_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"dblfree_e01 : NO UB ('free(NULL)' does nothing - we can repeat it as many times as we want)",
@@ -238,7 +212,6 @@
         "files":[
             "tests/dblfree/dblfree_e01.c"
         ],
-        "main":"main",
         "val-profile":"analyzer",
         "slevel":100
     },
@@ -248,7 +221,6 @@
         "files":[
             "tests/dblfree/dblfree_e02.c"
         ],
-        "main":"main",
         "val-profile":"analyzer",
         "slevel":100
     },
@@ -258,7 +230,6 @@
         "files":[
             "tests/diverr/diverr_e01.c"
         ],
-        "main":"main",
         "val-profile":"analyzer",
         "slevel":100
     },
@@ -268,7 +239,6 @@
         "files":[
             "tests/diverr/diverr_e02.c"
         ],
-        "main":"main",
         "val-profile":"analyzer",
         "slevel":100
     },
@@ -278,7 +248,6 @@
         "files":[
             "tests/diverr/diverr_e03.c"
         ],
-        "main":"main",
         "val-profile":"analyzer",
         "slevel":100
     },
@@ -288,7 +257,6 @@
         "files":[
             "tests/diverr/diverr_e04.c"
         ],
-        "main":"main",
         "val-profile":"analyzer",
         "slevel":100
     },
@@ -298,7 +266,6 @@
         "files":[
             "tests/fileclose/fileclose_e01.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -312,16 +279,14 @@
         "prefix_path":"..",
         "files":[
             "tests/fileclose/fileclose_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"filecpy_e01 : TODO",
         "prefix_path":"..",
         "files":[
             "tests/filecpy/filecpy_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"funcdecl_e01 : OK (UB detected)",
@@ -329,8 +294,7 @@
         "files":[
             "tests/funcdecl/funcdecl_e01a.c",
             "tests/funcdecl/funcdecl_e01b.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"funcdecl_e02 : OK (UB detected)",
@@ -338,8 +302,7 @@
         "files":[
             "tests/funcdecl/funcdecl_e02a.c",
             "tests/funcdecl/funcdecl_e02b.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"funcdecl_e03 : OK (UB detected)",
@@ -347,8 +310,7 @@
         "files":[
             "tests/funcdecl/funcdecl_e03a.c",
             "tests/funcdecl/funcdecl_e03b.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"funcdecl_e04 : CHECK",
@@ -357,7 +319,6 @@
             "tests/funcdecl/funcdecl_e04a.c",
             "tests/funcdecl/funcdecl_e04b.c"
         ],
-        "main":"main",
         "cpp-extra-args":[
             "-Itests/funcdecl"
         ]
@@ -368,16 +329,23 @@
         "files":[
             "tests/funcdecl/funcdecl_ex1a.c",
             "tests/funcdecl/funcdecl_ex1b.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"intoflow_e01 : CHECK",
+        "name":"intoflow_e01 : NO UB (TYPO?... There cannot be a signed overflow on an 'unsigned int' value.)",
         "prefix_path":"..",
         "files":[
             "tests/intoflow/intoflow_e01.c"
         ],
-        "main":"main",
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"intoflow_e01 : OK (UB detected), NOTE: changed 'add(unsigned int ui)' to 'add(int ui)'",
+        "prefix_path":"..",
+        "files":[
+            "tests/intoflow/intoflow_e01_corrected.c"
+        ],
         "val-profile":"analyzer",
         "slevel":100
     },
@@ -387,177 +355,164 @@
         "files":[
             "tests/intoflow/intoflow_e02.c"
         ],
-        "main":"main",
         "val-profile":"analyzer",
         "slevel":100
     },
     {
-        "name":"intptrconv_005 : CHECK : MISPLACED UB?",
+        "name":"intptrconv_005 : OK (detected a different UB) : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_005.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"intptrconv_e01 : CHECK : MISPLACED UB?",
+        "name":"intptrconv_e01 : OK (detected a different UB) : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"intptrconv_e02 : CHECK (NO UB?)",
+        "name":"intptrconv_e02 : NO UB (pointer created, but not used) : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"intptrconv_ex1 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_ex1.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"intptrconv_ex2 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_ex2.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"inverrno_e01",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"inverrno_e02",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"inverrno_e03",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invfmtstr_002 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/invfmtstr/invfmtstr_002.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invfmtstr_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/invfmtstr/invfmtstr_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e02 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e03 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"invptr_e04 : CHECK : MISPLACED UB",
+        "name":"invptr_e04 : OK (found the UB) : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e04.c"
+        ]
+    },
+    {
+        "name":"invptr_e04 : OK (found the UB), NOTE: made the test abstract to find the desired UB",
+        "prefix_path":"..",
+        "files":[
+            "tests/invptr/invptr_e04_abstract.c"
         ],
-        "main":"main"
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
         "name":"invptr_e05 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e05.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e06 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e06.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e07 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e07.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e08 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e08.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e09 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e09.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e10 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e10.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e11 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e11.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"invptr_e12 : TODO",
@@ -565,7 +520,6 @@
         "files":[
             "tests/invptr/invptr_e12.c"
         ],
-        "main":"main",
         "val-profile":"analyzer",
         "slevel":100,
         "filesystem":{
@@ -585,7 +539,6 @@
         "files":[
             "tests/ioileave/ioileave_e01.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -601,7 +554,6 @@
         "files":[
             "tests/liberr/liberr_e01.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -617,7 +569,6 @@
         "files":[
             "tests/liberr/liberr_e02.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -633,7 +584,6 @@
         "files":[
             "tests/liberr/liberr_ex1.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -649,7 +599,6 @@
         "files":[
             "tests/liberr/liberr_ex2.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -664,442 +613,419 @@
         "prefix_path":"..",
         "files":[
             "tests/libmod/libmod_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"libmod_e02 : NIY (modifying the string returned from localeconv)",
         "prefix_path":"..",
         "files":[
             "tests/libmod/libmod_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"libmod_e03 : NIY (modifying the string returned from getenv)",
         "prefix_path":"..",
         "files":[
             "tests/libmod/libmod_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"libmod_e04 : NIY (modifying the string returned from strerror)",
         "prefix_path":"..",
         "files":[
             "tests/libmod/libmod_e04.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"libptr_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/libptr/libptr_e01.c"
-        ],
-        "main":"main"
+        ]
     },
-    { "name":"libptr_e02 aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"aarch64" },
-    { "name":"libptr_e02 aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"aarch64eb" },
-    { "name":"libptr_e02 apple_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"apple_ppc_32" },
-    { "name":"libptr_e02 arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"arm_eabi" },
-    { "name":"libptr_e02 armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"armeb_eabi" },
-    { "name":"libptr_e02 gcc_aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_aarch64" },
-    { "name":"libptr_e02 gcc_aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_aarch64eb" },
-    { "name":"libptr_e02 gcc_arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_arm_eabi" },
-    { "name":"libptr_e02 gcc_armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_armeb_eabi" },
-    { "name":"libptr_e02 gcc_mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_mips_64" },
-    { "name":"libptr_e02 gcc_mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_mips_n32" },
-    { "name":"libptr_e02 gcc_mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_mips_o32" },
-    { "name":"libptr_e02 gcc_mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_mipsel_64" },
-    { "name":"libptr_e02 gcc_mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_mipsel_n32" },
-    { "name":"libptr_e02 gcc_mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_mipsel_o32" },
-    { "name":"libptr_e02 gcc_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_ppc_32" },
-    { "name":"libptr_e02 gcc_ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_ppc_64" },
-    { "name":"libptr_e02 gcc_rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_rv32ifdq" },
-    { "name":"libptr_e02 gcc_rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_rv64ifdq" },
-    { "name":"libptr_e02 gcc_sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_sparc_32" },
-    { "name":"libptr_e02 gcc_sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_sparc_64" },
-    { "name":"libptr_e02 gcc_x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_x86_16" },
-    { "name":"libptr_e02 gcc_x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_x86_16_huge" },
-    { "name":"libptr_e02 gcc_x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_x86_32" },
-    { "name":"libptr_e02 gcc_x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"gcc_x86_64" },
-    { "name":"libptr_e02 mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"mips_64" },
-    { "name":"libptr_e02 mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"mips_n32" },
-    { "name":"libptr_e02 mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"mips_o32" },
-    { "name":"libptr_e02 mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"mipsel_64" },
-    { "name":"libptr_e02 mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"mipsel_n32" },
-    { "name":"libptr_e02 mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"mipsel_o32" },
-    { "name":"libptr_e02 ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"ppc_32" },
-    { "name":"libptr_e02 ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"ppc_64" },
-    { "name":"libptr_e02 rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"rv32ifdq" },
-    { "name":"libptr_e02 rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"rv64ifdq" },
-    { "name":"libptr_e02 sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"sparc_32" },
-    { "name":"libptr_e02 sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"sparc_64" },
-    { "name":"libptr_e02 x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"x86_16" },
-    { "name":"libptr_e02 x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"x86_16_huge" },
-    { "name":"libptr_e02 x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"x86_32" },
-    { "name":"libptr_e02 x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"x86_64" },
-    { "name":"libptr_e02 x86_win32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"x86_win32" },
-    { "name":"libptr_e02 x86_win64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "main":"main", "machdep":"x86_win64" },
-    { "name":"libptr_e03 aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"aarch64" },
-    { "name":"libptr_e03 aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"aarch64eb" },
-    { "name":"libptr_e03 apple_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"apple_ppc_32" },
-    { "name":"libptr_e03 arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"arm_eabi" },
-    { "name":"libptr_e03 armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"armeb_eabi" },
-    { "name":"libptr_e03 gcc_aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_aarch64" },
-    { "name":"libptr_e03 gcc_aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_aarch64eb" },
-    { "name":"libptr_e03 gcc_arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_arm_eabi" },
-    { "name":"libptr_e03 gcc_armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_armeb_eabi" },
-    { "name":"libptr_e03 gcc_mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_mips_64" },
-    { "name":"libptr_e03 gcc_mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_mips_n32" },
-    { "name":"libptr_e03 gcc_mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_mips_o32" },
-    { "name":"libptr_e03 gcc_mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_mipsel_64" },
-    { "name":"libptr_e03 gcc_mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_mipsel_n32" },
-    { "name":"libptr_e03 gcc_mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_mipsel_o32" },
-    { "name":"libptr_e03 gcc_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_ppc_32" },
-    { "name":"libptr_e03 gcc_ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_ppc_64" },
-    { "name":"libptr_e03 gcc_rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_rv32ifdq" },
-    { "name":"libptr_e03 gcc_rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_rv64ifdq" },
-    { "name":"libptr_e03 gcc_sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_sparc_32" },
-    { "name":"libptr_e03 gcc_sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_sparc_64" },
-    { "name":"libptr_e03 gcc_x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_x86_16" },
-    { "name":"libptr_e03 gcc_x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_x86_16_huge" },
-    { "name":"libptr_e03 gcc_x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_x86_32" },
-    { "name":"libptr_e03 gcc_x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"gcc_x86_64" },
-    { "name":"libptr_e03 mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"mips_64" },
-    { "name":"libptr_e03 mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"mips_n32" },
-    { "name":"libptr_e03 mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"mips_o32" },
-    { "name":"libptr_e03 mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"mipsel_64" },
-    { "name":"libptr_e03 mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"mipsel_n32" },
-    { "name":"libptr_e03 mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"mipsel_o32" },
-    { "name":"libptr_e03 ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"ppc_32" },
-    { "name":"libptr_e03 ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"ppc_64" },
-    { "name":"libptr_e03 rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"rv32ifdq" },
-    { "name":"libptr_e03 rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"rv64ifdq" },
-    { "name":"libptr_e03 sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"sparc_32" },
-    { "name":"libptr_e03 sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"sparc_64" },
-    { "name":"libptr_e03 x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"x86_16" },
-    { "name":"libptr_e03 x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"x86_16_huge" },
-    { "name":"libptr_e03 x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"x86_32" },
-    { "name":"libptr_e03 x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"x86_64" },
-    { "name":"libptr_e03 x86_win32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"x86_win32" },
-    { "name":"libptr_e03 x86_win64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "main":"main", "machdep":"x86_win64" },
+    { "name":"libptr_e02 aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"aarch64" },
+    { "name":"libptr_e02 aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"aarch64eb" },
+    { "name":"libptr_e02 apple_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"apple_ppc_32" },
+    { "name":"libptr_e02 arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"arm_eabi" },
+    { "name":"libptr_e02 armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"armeb_eabi" },
+    { "name":"libptr_e02 gcc_aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_aarch64" },
+    { "name":"libptr_e02 gcc_aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_aarch64eb" },
+    { "name":"libptr_e02 gcc_arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_arm_eabi" },
+    { "name":"libptr_e02 gcc_armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_armeb_eabi" },
+    { "name":"libptr_e02 gcc_mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mips_64" },
+    { "name":"libptr_e02 gcc_mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mips_n32" },
+    { "name":"libptr_e02 gcc_mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mips_o32" },
+    { "name":"libptr_e02 gcc_mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mipsel_64" },
+    { "name":"libptr_e02 gcc_mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mipsel_n32" },
+    { "name":"libptr_e02 gcc_mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_mipsel_o32" },
+    { "name":"libptr_e02 gcc_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_ppc_32" },
+    { "name":"libptr_e02 gcc_ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_ppc_64" },
+    { "name":"libptr_e02 gcc_rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_rv32ifdq" },
+    { "name":"libptr_e02 gcc_rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_rv64ifdq" },
+    { "name":"libptr_e02 gcc_sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_sparc_32" },
+    { "name":"libptr_e02 gcc_sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_sparc_64" },
+    { "name":"libptr_e02 gcc_x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_x86_16" },
+    { "name":"libptr_e02 gcc_x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_x86_16_huge" },
+    { "name":"libptr_e02 gcc_x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_x86_32" },
+    { "name":"libptr_e02 gcc_x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"gcc_x86_64" },
+    { "name":"libptr_e02 mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mips_64" },
+    { "name":"libptr_e02 mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mips_n32" },
+    { "name":"libptr_e02 mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mips_o32" },
+    { "name":"libptr_e02 mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mipsel_64" },
+    { "name":"libptr_e02 mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mipsel_n32" },
+    { "name":"libptr_e02 mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"mipsel_o32" },
+    { "name":"libptr_e02 ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"ppc_32" },
+    { "name":"libptr_e02 ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"ppc_64" },
+    { "name":"libptr_e02 rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"rv32ifdq" },
+    { "name":"libptr_e02 rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"rv64ifdq" },
+    { "name":"libptr_e02 sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"sparc_32" },
+    { "name":"libptr_e02 sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"sparc_64" },
+    { "name":"libptr_e02 x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_16" },
+    { "name":"libptr_e02 x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_16_huge" },
+    { "name":"libptr_e02 x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_32" },
+    { "name":"libptr_e02 x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_64" },
+    { "name":"libptr_e02 x86_win32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_win32" },
+    { "name":"libptr_e02 x86_win64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e02.c" ], "machdep":"x86_win64" },
+    { "name":"libptr_e03 aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"aarch64" },
+    { "name":"libptr_e03 aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"aarch64eb" },
+    { "name":"libptr_e03 apple_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"apple_ppc_32" },
+    { "name":"libptr_e03 arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"arm_eabi" },
+    { "name":"libptr_e03 armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"armeb_eabi" },
+    { "name":"libptr_e03 gcc_aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_aarch64" },
+    { "name":"libptr_e03 gcc_aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_aarch64eb" },
+    { "name":"libptr_e03 gcc_arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_arm_eabi" },
+    { "name":"libptr_e03 gcc_armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_armeb_eabi" },
+    { "name":"libptr_e03 gcc_mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_mips_64" },
+    { "name":"libptr_e03 gcc_mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_mips_n32" },
+    { "name":"libptr_e03 gcc_mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_mips_o32" },
+    { "name":"libptr_e03 gcc_mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_mipsel_64" },
+    { "name":"libptr_e03 gcc_mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_mipsel_n32" },
+    { "name":"libptr_e03 gcc_mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_mipsel_o32" },
+    { "name":"libptr_e03 gcc_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_ppc_32" },
+    { "name":"libptr_e03 gcc_ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_ppc_64" },
+    { "name":"libptr_e03 gcc_rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_rv32ifdq" },
+    { "name":"libptr_e03 gcc_rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_rv64ifdq" },
+    { "name":"libptr_e03 gcc_sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_sparc_32" },
+    { "name":"libptr_e03 gcc_sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_sparc_64" },
+    { "name":"libptr_e03 gcc_x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_x86_16" },
+    { "name":"libptr_e03 gcc_x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_x86_16_huge" },
+    { "name":"libptr_e03 gcc_x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_x86_32" },
+    { "name":"libptr_e03 gcc_x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"gcc_x86_64" },
+    { "name":"libptr_e03 mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"mips_64" },
+    { "name":"libptr_e03 mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"mips_n32" },
+    { "name":"libptr_e03 mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"mips_o32" },
+    { "name":"libptr_e03 mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"mipsel_64" },
+    { "name":"libptr_e03 mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"mipsel_n32" },
+    { "name":"libptr_e03 mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"mipsel_o32" },
+    { "name":"libptr_e03 ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"ppc_32" },
+    { "name":"libptr_e03 ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"ppc_64" },
+    { "name":"libptr_e03 rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"rv32ifdq" },
+    { "name":"libptr_e03 rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"rv64ifdq" },
+    { "name":"libptr_e03 sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"sparc_32" },
+    { "name":"libptr_e03 sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"sparc_64" },
+    { "name":"libptr_e03 x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"x86_16" },
+    { "name":"libptr_e03 x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"x86_16_huge" },
+    { "name":"libptr_e03 x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"x86_32" },
+    { "name":"libptr_e03 x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"x86_64" },
+    { "name":"libptr_e03 x86_win32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"x86_win32" },
+    { "name":"libptr_e03 x86_win64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e03.c" ], "machdep":"x86_win64" },
     {
         "name":"libptr_e04 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/libptr/libptr_e04.c"
-        ],
-        "main":"main"
+        ]
     },
-    { "name":"libptr_e05 aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"aarch64" },
-    { "name":"libptr_e05 aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"aarch64eb" },
-    { "name":"libptr_e05 apple_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"apple_ppc_32" },
-    { "name":"libptr_e05 arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"arm_eabi" },
-    { "name":"libptr_e05 armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"armeb_eabi" },
-    { "name":"libptr_e05 gcc_aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_aarch64" },
-    { "name":"libptr_e05 gcc_aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_aarch64eb" },
-    { "name":"libptr_e05 gcc_arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_arm_eabi" },
-    { "name":"libptr_e05 gcc_armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_armeb_eabi" },
-    { "name":"libptr_e05 gcc_mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_mips_64" },
-    { "name":"libptr_e05 gcc_mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_mips_n32" },
-    { "name":"libptr_e05 gcc_mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_mips_o32" },
-    { "name":"libptr_e05 gcc_mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_mipsel_64" },
-    { "name":"libptr_e05 gcc_mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_mipsel_n32" },
-    { "name":"libptr_e05 gcc_mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_mipsel_o32" },
-    { "name":"libptr_e05 gcc_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_ppc_32" },
-    { "name":"libptr_e05 gcc_ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_ppc_64" },
-    { "name":"libptr_e05 gcc_rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_rv32ifdq" },
-    { "name":"libptr_e05 gcc_rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_rv64ifdq" },
-    { "name":"libptr_e05 gcc_sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_sparc_32" },
-    { "name":"libptr_e05 gcc_sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_sparc_64" },
-    { "name":"libptr_e05 gcc_x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_x86_16" },
-    { "name":"libptr_e05 gcc_x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_x86_16_huge" },
-    { "name":"libptr_e05 gcc_x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_x86_32" },
-    { "name":"libptr_e05 gcc_x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"gcc_x86_64" },
-    { "name":"libptr_e05 mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"mips_64" },
-    { "name":"libptr_e05 mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"mips_n32" },
-    { "name":"libptr_e05 mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"mips_o32" },
-    { "name":"libptr_e05 mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"mipsel_64" },
-    { "name":"libptr_e05 mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"mipsel_n32" },
-    { "name":"libptr_e05 mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"mipsel_o32" },
-    { "name":"libptr_e05 ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"ppc_32" },
-    { "name":"libptr_e05 ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"ppc_64" },
-    { "name":"libptr_e05 rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"rv32ifdq" },
-    { "name":"libptr_e05 rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"rv64ifdq" },
-    { "name":"libptr_e05 sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"sparc_32" },
-    { "name":"libptr_e05 sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"sparc_64" },
-    { "name":"libptr_e05 x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"x86_16" },
-    { "name":"libptr_e05 x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"x86_16_huge" },
-    { "name":"libptr_e05 x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"x86_32" },
-    { "name":"libptr_e05 x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"x86_64" },
-    { "name":"libptr_e05 x86_win32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"x86_win32" },
-    { "name":"libptr_e05 x86_win64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "main":"main", "machdep":"x86_win64" },
+    { "name":"libptr_e05 aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"aarch64" },
+    { "name":"libptr_e05 aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"aarch64eb" },
+    { "name":"libptr_e05 apple_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"apple_ppc_32" },
+    { "name":"libptr_e05 arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"arm_eabi" },
+    { "name":"libptr_e05 armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"armeb_eabi" },
+    { "name":"libptr_e05 gcc_aarch64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_aarch64" },
+    { "name":"libptr_e05 gcc_aarch64eb", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_aarch64eb" },
+    { "name":"libptr_e05 gcc_arm_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_arm_eabi" },
+    { "name":"libptr_e05 gcc_armeb_eabi", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_armeb_eabi" },
+    { "name":"libptr_e05 gcc_mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_mips_64" },
+    { "name":"libptr_e05 gcc_mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_mips_n32" },
+    { "name":"libptr_e05 gcc_mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_mips_o32" },
+    { "name":"libptr_e05 gcc_mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_mipsel_64" },
+    { "name":"libptr_e05 gcc_mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_mipsel_n32" },
+    { "name":"libptr_e05 gcc_mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_mipsel_o32" },
+    { "name":"libptr_e05 gcc_ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_ppc_32" },
+    { "name":"libptr_e05 gcc_ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_ppc_64" },
+    { "name":"libptr_e05 gcc_rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_rv32ifdq" },
+    { "name":"libptr_e05 gcc_rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_rv64ifdq" },
+    { "name":"libptr_e05 gcc_sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_sparc_32" },
+    { "name":"libptr_e05 gcc_sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_sparc_64" },
+    { "name":"libptr_e05 gcc_x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_x86_16" },
+    { "name":"libptr_e05 gcc_x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_x86_16_huge" },
+    { "name":"libptr_e05 gcc_x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_x86_32" },
+    { "name":"libptr_e05 gcc_x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"gcc_x86_64" },
+    { "name":"libptr_e05 mips_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"mips_64" },
+    { "name":"libptr_e05 mips_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"mips_n32" },
+    { "name":"libptr_e05 mips_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"mips_o32" },
+    { "name":"libptr_e05 mipsel_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"mipsel_64" },
+    { "name":"libptr_e05 mipsel_n32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"mipsel_n32" },
+    { "name":"libptr_e05 mipsel_o32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"mipsel_o32" },
+    { "name":"libptr_e05 ppc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"ppc_32" },
+    { "name":"libptr_e05 ppc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"ppc_64" },
+    { "name":"libptr_e05 rv32ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"rv32ifdq" },
+    { "name":"libptr_e05 rv64ifdq", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"rv64ifdq" },
+    { "name":"libptr_e05 sparc_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"sparc_32" },
+    { "name":"libptr_e05 sparc_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"sparc_64" },
+    { "name":"libptr_e05 x86_16", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"x86_16" },
+    { "name":"libptr_e05 x86_16_huge", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"x86_16_huge" },
+    { "name":"libptr_e05 x86_32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"x86_32" },
+    { "name":"libptr_e05 x86_64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"x86_64" },
+    { "name":"libptr_e05 x86_win32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"x86_win32" },
+    { "name":"libptr_e05 x86_win64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"x86_win64" },
     {
         "name":"libuse_e01",
         "prefix_path":"..",
         "files":[
             "tests/libuse/libuse_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"libuse_e02",
         "prefix_path":"..",
         "files":[
             "tests/libuse/libuse_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"libuse_e03",
         "prefix_path":"..",
         "files":[
             "tests/libuse/libuse_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"nonnullstr_e01",
+        "name":"nonnullstr_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/nonnullstr/nonnullstr_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"nonnullstr_e02",
+        "name":"nonnullstr_e02 : MISPLACED UB (reading uninitialized memory)",
         "prefix_path":"..",
         "files":[
             "tests/nonnullstr/nonnullstr_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"nonnullstr_e03",
+        "name":"nonnullstr_e03 : MISPLACED UB (reading uninitialized memory)",
         "prefix_path":"..",
         "files":[
             "tests/nonnullstr/nonnullstr_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"nullref_e01",
+        "name":"nullref_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/nullref/nullref_e01.c"
         ],
-        "main":"main"
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
-        "name":"padcomp_e01",
+        "name":"padcomp_e01 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/padcomp/padcomp_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"ptrcomp_e01",
+        "name":"ptrcomp_e01 : OK (UB detected in the log)",
         "prefix_path":"..",
         "files":[
             "tests/ptrcomp/ptrcomp_e01.c"
         ],
-        "main":"main",
         "sa":true
     },
     {
-        "name":"ptrobj_e01",
+        "name":"ptrobj_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/ptrobj/ptrobj_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"ptrobj_ex1",
+        "name":"ptrobj_ex1 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/ptrobj/ptrobj_ex1.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"ptrobj_ex2",
+        "name":"ptrobj_ex2 : TYPO! (there is a typo in the example - 'subrtact')",
         "prefix_path":"..",
         "files":[
             "tests/ptrobj/ptrobj_ex2.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e01",
+        "name":"ptrobj_ex2 : OK (no false positive), NOTE: there was a typo in the example! s/'subrtact'/'subtract'/g",
+        "prefix_path":"..",
+        "files":[
+            "tests/ptrobj/ptrobj_ex2_corrected.c"
+        ]
+    },
+    {
+        "name":"resident_e01 : NIY (defining reserved identifier errno)",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e02",
+        "name":"resident_e02 : NIY (defining reserved symbol _RESIDENT_HEADER_H)",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e03",
+        "name":"resident_e03 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e04",
+        "name":"resident_e04 : NIY (defining reserved file scope identifier _limit)",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e04.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e05",
+        "name":"resident_e05 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e05.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e06",
+        "name":"resident_e06 : HALF! OK (detected reusing identifier SIZE_MAX), NIY (defining reserved identifier INTFAST16_LIMIT_MAX)",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e06.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e07",
+        "name":"resident_e07 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e07.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e08",
+        "name":"resident_e08 : NIY (defining reserved identifier 'malloc()' and 'free()')",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e08.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"resident_e09",
+        "name":"resident_e09 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e09.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"restrict_e01",
+        "name":"restrict_e01 : NO UB (the memory zones passed to memcpy do not overlap) : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/restrict/restrict_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
-        "name":"restrict_e02",
+        "name":"restrict_e01 : OK (UB detected), NOTE: the memory zones passed to memcpy made to overlap",
+        "prefix_path":"..",
+        "files":[
+            "tests/restrict/restrict_e01_corrected.c"
+        ]
+    },
+    {
+        "name":"restrict_e02 : NIY (qualifier 'restrict')",
         "prefix_path":"..",
         "files":[
             "tests/restrict/restrict_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"sigcall_e01 : SKIP - CONCURRENT - SIGNALS",
         "prefix_path":"..",
         "files":[
             "tests/sigcall/sigcall_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"signconv_e01",
         "prefix_path":"..",
         "files":[
             "tests/signconv/signconv_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"sizeofptr_e01",
         "prefix_path":"..",
         "files":[
             "tests/sizeofptr/sizeofptr_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"strmod_e01",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"strmod_e02",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"strmod_e03",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"strmod_e04",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e04.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"strmod_e05",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e05.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"strmod_e06",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e06.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"swtchdflt_e01",
         "prefix_path":"..",
         "files":[
             "tests/swtchdflt/swtchdflt_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"syscall_e01 : SKIP : system()",
@@ -1107,7 +1033,6 @@
         "files":[
             "tests/syscall/syscall_e01.c"
         ],
-        "main":"main",
         "filesystem":{
             "files":[
                 {
@@ -1122,144 +1047,126 @@
         "prefix_path":"..",
         "files":[
             "tests/syscall/syscall_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"taintformatio_e01",
         "prefix_path":"..",
         "files":[
             "tests/taintformatio/taintformatio_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"taintformatio_e02",
         "prefix_path":"..",
         "files":[
             "tests/taintformatio/taintformatio_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"taintnoproto_e01",
         "prefix_path":"..",
         "files":[
             "tests/taintnoproto/taintnoproto_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"taintsink_e01",
         "prefix_path":"..",
         "files":[
             "tests/taintsink/taintsink_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"taintsink_e02",
         "prefix_path":"..",
         "files":[
             "tests/taintsink/taintsink_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"taintstrcpy_e01",
         "prefix_path":"..",
         "files":[
             "tests/taintstrcpy/taintstrcpy_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"uninitref_e01",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"uninitref_e02",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"uninitref_e03",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"uninitref_e04",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e04.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"usrfmt_e01",
         "prefix_path":"..",
         "files":[
             "tests/usrfmt/usrfmt_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"usrfmt_e02",
         "prefix_path":"..",
         "files":[
             "tests/usrfmt/usrfmt_e02.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"usrfmt_e03",
         "prefix_path":"..",
         "files":[
             "tests/usrfmt/usrfmt_e03.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"usrfmt_e04",
         "prefix_path":"..",
         "files":[
             "tests/usrfmt/usrfmt_e04.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"xfilepos_002",
         "prefix_path":"..",
         "files":[
             "tests/xfilepos/xfilepos_002.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"xfilepos_e01",
         "prefix_path":"..",
         "files":[
             "tests/xfilepos/xfilepos_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"xfree_e01",
         "prefix_path":"..",
         "files":[
             "tests/xfree/xfree_e01.c"
-        ],
-        "main":"main"
+        ]
     },
     {
         "name":"xfree_e02",
