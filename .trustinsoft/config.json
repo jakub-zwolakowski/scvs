@@ -965,56 +965,58 @@
         ]
     },
     {
-        "name":"signconv_e01",
+        "name":"signconv_e01 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/signconv/signconv_e01.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel": 10000
     },
     {
-        "name":"sizeofptr_e01",
+        "name":"sizeofptr_e01 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/sizeofptr/sizeofptr_e01.c"
         ]
     },
     {
-        "name":"strmod_e01",
+        "name":"strmod_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e01.c"
         ]
     },
     {
-        "name":"strmod_e02",
+        "name":"strmod_e02 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e02.c"
         ]
     },
     {
-        "name":"strmod_e03",
+        "name":"strmod_e03 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e03.c"
         ]
     },
     {
-        "name":"strmod_e04",
+        "name":"strmod_e04 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e04.c"
         ]
     },
     {
-        "name":"strmod_e05",
+        "name":"strmod_e05 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e05.c"
         ]
     },
     {
-        "name":"strmod_e06",
+        "name":"strmod_e06 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/strmod/strmod_e06.c"
@@ -1050,18 +1052,30 @@
         ]
     },
     {
-        "name":"taintformatio_e01",
+        "name":"taintformatio_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/taintformatio/taintformatio_e01.c"
-        ]
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"tis-mkfs-stdin",
+                    "size":128,
+                    "min_val":42,
+                    "max_val":42
+                }
+            ]
+        }
     },
     {
-        "name":"taintformatio_e02",
+        "name":"taintformatio_e02 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/taintformatio/taintformatio_e02.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000
     },
     {
         "name":"taintnoproto_e01",
