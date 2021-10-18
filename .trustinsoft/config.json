@@ -392,26 +392,26 @@
         "slevel":100
     },
     {
-        "name":"intptrconv_005",
+        "name":"intptrconv_005 : CHECK : MISPLACED UB?",
         "prefix_path":"..",
         "files":[
-            "tests/intptrconv/intptrconv_005.c : CHECK : MISPLACED UB?"
+            "tests/intptrconv/intptrconv_005.c"
         ],
         "main":"main"
     },
     {
-        "name":"intptrconv_e01",
+        "name":"intptrconv_e01 : CHECK : MISPLACED UB?",
         "prefix_path":"..",
         "files":[
-            "tests/intptrconv/intptrconv_e01.c : CHECK : MISPLACED UB?"
+            "tests/intptrconv/intptrconv_e01.c"
         ],
         "main":"main"
     },
     {
-        "name":"intptrconv_e02",
+        "name":"intptrconv_e02 : CHECK (NO UB?)",
         "prefix_path":"..",
         "files":[
-            "tests/intptrconv/intptrconv_e02.c : CHECK (NO UB?)"
+            "tests/intptrconv/intptrconv_e02.c"
         ],
         "main":"main"
     },
@@ -456,7 +456,7 @@
         "main":"main"
     },
     {
-        "name":"invfmtstr_002",
+        "name":"invfmtstr_002 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/invfmtstr/invfmtstr_002.c"
@@ -464,7 +464,7 @@
         "main":"main"
     },
     {
-        "name":"invfmtstr_e01",
+        "name":"invfmtstr_e01 : OK - DETECTED",
         "prefix_path":"..",
         "files":[
             "tests/invfmtstr/invfmtstr_e01.c"
@@ -580,44 +580,84 @@
         }
     },
     {
-        "name":"ioileave_e01",
+        "name":"ioileave_e01 : NIY",
         "prefix_path":"..",
         "files":[
             "tests/ioileave/ioileave_e01.c"
         ],
-        "main":"main"
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
-        "name":"liberr_e01",
+        "name":"liberr_e01 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/liberr/liberr_e01.c"
         ],
-        "main":"main"
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
-        "name":"liberr_e02",
+        "name":"liberr_e02 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/liberr/liberr_e02.c"
         ],
-        "main":"main"
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
-        "name":"liberr_ex1",
+        "name":"liberr_ex1 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/liberr/liberr_ex1.c"
         ],
-        "main":"main"
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
-        "name":"liberr_ex2",
+        "name":"liberr_ex2 : OK - NO FALSE POSITIVE",
         "prefix_path":"..",
         "files":[
             "tests/liberr/liberr_ex2.c"
         ],
-        "main":"main"
+        "main":"main",
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
         "name":"libmod_e01",
