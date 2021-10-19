@@ -216,10 +216,19 @@
         "slevel":100
     },
     {
-        "name":"dblfree_e02 : NO UB (no double free happening in any possible program execution)",
+        "name":"dblfree_e02 : NO UB (no double free happening in any possible program execution, see https://cigix.me/c17#7.22.3.5.p3)",
         "prefix_path":"..",
         "files":[
             "tests/dblfree/dblfree_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"dblfree_e02 : VERSION WITH size = 0",
+        "prefix_path":"..",
+        "files":[
+            "tests/dblfree/dblfree_e02_size_zero.c"
         ],
         "val-profile":"analyzer",
         "slevel":100
@@ -324,7 +333,7 @@
         ]
     },
     {
-        "name":"funcdecl_ex1 : CHECK",
+        "name":"funcdecl_ex1 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_ex1a.c",
@@ -394,21 +403,21 @@
         ]
     },
     {
-        "name":"inverrno_e01",
+        "name":"inverrno_e01 : TODO",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e01.c"
         ]
     },
     {
-        "name":"inverrno_e02",
+        "name":"inverrno_e02 : TODO",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e02.c"
         ]
     },
     {
-        "name":"inverrno_e03",
+        "name":"inverrno_e03 : TODO",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e03.c"
@@ -521,14 +530,14 @@
             "tests/invptr/invptr_e12.c"
         ],
         "val-profile":"analyzer",
-        "slevel":100,
+        "slevel":10000,
         "filesystem":{
             "files":[
                 {
                     "name":"scvs_testfile.txt",
-                    "size": 100,
+                    "size": 1,
                     "min_val": 0,
-                    "max_val": 255
+                    "max_val": 0
                 }
             ]
         }
@@ -780,21 +789,21 @@
     { "name":"libptr_e05 x86_win32", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"x86_win32" },
     { "name":"libptr_e05 x86_win64", "prefix_path":"..", "files":[ "tests/libptr/libptr_e05.c" ], "machdep":"x86_win64" },
     {
-        "name":"libuse_e01",
+        "name":"libuse_e01 : NIY (invalid getenv() result access)",
         "prefix_path":"..",
         "files":[
             "tests/libuse/libuse_e01.c"
         ]
     },
     {
-        "name":"libuse_e02",
+        "name":"libuse_e02 : NIY (invalid setlocale() result access)",
         "prefix_path":"..",
         "files":[
             "tests/libuse/libuse_e02.c"
         ]
     },
     {
-        "name":"libuse_e03",
+        "name":"libuse_e03 : NIY (invalid strerror() result access)",
         "prefix_path":"..",
         "files":[
             "tests/libuse/libuse_e03.c"
@@ -1078,112 +1087,154 @@
         "slevel":10000
     },
     {
-        "name":"taintnoproto_e01",
+        "name":"taintnoproto_e01 : NO UB (maybe the behavior is unexpected, but this code is correct - the type of 'int array[]' is complete, so can be used as an argument to 'sizeof' - see https://cigix.me/c17#6.7.6.2.p4) : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/taintnoproto/taintnoproto_e01.c"
         ]
     },
     {
-        "name":"taintsink_e01",
+        "name":"taintsink_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/taintsink/taintsink_e01.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000
     },
     {
-        "name":"taintsink_e02",
+        "name":"taintsink_e02 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/taintsink/taintsink_e02.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000
     },
     {
-        "name":"taintstrcpy_e01",
+        "name":"taintstrcpy_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/taintstrcpy/taintstrcpy_e01.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel":10000
     },
     {
-        "name":"uninitref_e01",
+        "name":"uninitref_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e01.c"
         ]
     },
     {
-        "name":"uninitref_e02",
+        "name":"uninitref_e02 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e02.c"
         ]
     },
     {
-        "name":"uninitref_e03",
+        "name":"uninitref_e03 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e03.c"
         ]
     },
     {
-        "name":"uninitref_e04",
+        "name":"uninitref_e04 : OK (UB detected) : MISPLACED UB",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e04.c"
         ]
     },
     {
-        "name":"usrfmt_e01",
+        "name":"usrfmt_e01 : CHECK", 
         "prefix_path":"..",
         "files":[
             "tests/usrfmt/usrfmt_e01.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel":100,
+        "filesystem":{
+            "files":[
+                {
+                    "name":"catalog"
+                }
+            ]
+        }
     },
     {
-        "name":"usrfmt_e02",
+        "name":"usrfmt_e02 : CHECK",
         "prefix_path":"..",
         "files":[
             "tests/usrfmt/usrfmt_e02.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel":100,
+        "filesystem":{
+            "files":[
+                {
+                    "name":"catalog"
+                }
+            ]
+        }
     },
     {
-        "name":"usrfmt_e03",
+        "name":"usrfmt_e03 : OK (UB detected), NOTE: there is more than one problem here",
         "prefix_path":"..",
         "files":[
             "tests/usrfmt/usrfmt_e03.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel":1000
     },
     {
-        "name":"usrfmt_e04",
+        "name":"usrfmt_e04 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/usrfmt/usrfmt_e04.c"
         ]
     },
     {
-        "name":"xfilepos_002",
+        "name":"xfilepos_002 : NIY (checking if 'fsetpos' argument always comes from 'fgetpos')",
         "prefix_path":"..",
         "files":[
             "tests/xfilepos/xfilepos_002.c"
-        ]
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
-        "name":"xfilepos_e01",
+        "name":"xfilepos_e01 : NIY (checking if 'fsetpos' argument always comes from 'fgetpos')",
         "prefix_path":"..",
         "files":[
             "tests/xfilepos/xfilepos_e01.c"
-        ]
+        ],
+        "filesystem":{
+            "files":[
+                {
+                    "name":"testfile.txt",
+                    "from":"README"
+                }
+            ]
+        }
     },
     {
-        "name":"xfree_e01",
+        "name":"xfree_e01 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/xfree/xfree_e01.c"
         ]
     },
     {
-        "name":"xfree_e02",
+        "name":"xfree_e02 : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/xfree/xfree_e02.c"
