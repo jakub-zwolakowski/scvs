@@ -540,7 +540,8 @@
                     "max_val": 0
                 }
             ]
-        }
+        },
+        "val-timeout":30
     },
     {
         "name":"ioileave_e01 : NIY (interleaving reads and writes to a file)",
@@ -822,12 +823,25 @@
         "files":[
             "tests/nonnullstr/nonnullstr_e02.c"
         ]
+    },    {
+        "name":"nonnullstr_e02 : DETECTED, NOTE: we initialize the string : CHECK",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e02.c"
+        ]
     },
     {
         "name":"nonnullstr_e03 : MISPLACED UB (reading uninitialized memory)",
         "prefix_path":"..",
         "files":[
             "tests/nonnullstr/nonnullstr_e03.c"
+        ]
+    },
+    {
+        "name":"nonnullstr_e03 : DETECTED, NOTE: we initialize the string : CHECK",
+        "prefix_path":"..",
+        "files":[
+            "tests/nonnullstr/nonnullstr_e03_string_initialized.c"
         ]
     },
     {
