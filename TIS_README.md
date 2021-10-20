@@ -1,5 +1,7 @@
 # TrustInSoft results
 
+TrustInSoft results on the [Secure Coding Validation Suite](https://github.com/SEI-CERT/scvs)
+
 ## accfree
 
 ### accfree_e01
@@ -28,7 +30,7 @@ tests/accfree/accfree_e03.c:76:[kernel] warning: Unclassified alarm: assert \war
                          main
 ```
 
-Now, if we correct this Undefined Behavior, we stumble at another problem - the expected Undefined Behavior, as described in the test, actually does not exist. There is no possible execution of this program where a double free happens. This is the decription in the example:
+Now, if we correct this Undefined Behavior, we stumble at another problem - the expected Undefined Behavior, as described in the test, actually does not exist. There is no possible execution of this program where a double free happens. This is the description in the example:
 
 ```C
  * Rule: [accfree]
@@ -160,7 +162,7 @@ NO UB (infinite loop)
 
 Using an assignment expression (i.e. `x = y`) as a loop controlling expression is usually a typo and may cause unexpected behavior, but it is not Undefined Behavior.
 
-Moreover, both `gcc` and `clang` find this kind of possible typos and suggest adding parentheses around the assingment expression if it was really intended to be an assignment and not a comparison.
+Moreover, both `gcc` and `clang` find this kind of possible typos and suggest adding parentheses around the assignment expression if it was really intended to be an assignment and not a comparison.
 
 ### boolasgn_e02
 
@@ -355,7 +357,7 @@ Is this a typo? The test's description talks about integer overflow:
 However, the only variables that get incremented in this program ar `i` and `ui`:
 
 * The variable `i` only goes from 1 to 10. So there cannot be a be a overflow here.
-* And the variable `ui` is not a signed integer but an `usigned int`. There cannot be a signed overflow on an `unsigned int` value.
+* And the variable `ui` is not a signed integer but an `unsigned int`. There cannot be a signed overflow on an `unsigned int` value.
 
 Added a corrected version - changed `add(unsigned int ui)` to `add(int ui)` and now TrustInSoft detects this Undefined Behavior as expected.
 
@@ -405,13 +407,17 @@ No Undefined Behavior detected, as expected.
 
 ### inverrno_e01
 
+NO UB
+
 Not setting `errno` to zero before calling a library function is not Undefined Behavior.
 
-Although the usual coding pattern is to set `errno` before calling a library function that modifies `errno` upen encountering an error, doing things differently is not always an error. Another common pattern is also chaining calls to multiple library functions one after another without checking the `errno` value in between. As no library function is allowed to set `errno` to zero upon successful completion, this way we can check its value just one at the end of such a chain and know if an error occured somewhere on the way.
+Although the usual coding pattern is to set `errno` before calling a library function that modifies `errno` upon encountering an error, doing things differently is not always an error. Another common pattern is also chaining calls to multiple library functions one after another without checking the `errno` value in between. As no library function is allowed to set `errno` to zero upon successful completion, this way we can check its value just one at the end of such a chain and know if an error occurred somewhere on the way.
 
 Moreover, as `errno` is always initialized to zero, in this particular example it is actually still equal zero when the library function `strtoul` is called, so no problem can occur - therefore no misunderstanding can occur here.
 
 ### inverrno_e02
+
+NO UB
 
 Not checking the return value of `signal()` before checking the value of `errno` is not Undefined Behavior.
 
@@ -420,6 +426,8 @@ As in the previous case: although the usual coding pattern in case of functions 
 Moreover, as `errno` is always initialized to zero and `signal()` is the only function that can modify `errno` in this particular example, so no previous function could have set it already - therefore, again, no misunderstanding can occur here.
 
 ### inverrno_e03
+
+NO UB
 
 Checking the value of `errno` after a call to `setlocale()` is not Undefined Behavior.
 
@@ -463,11 +471,13 @@ No Undefined Behavior detected, as expected.
 
 ### invptr_e04
 
-OK (found the UB)
-
 MISPLACED "REQUIRED DIAGNOSTIC"
 
-OK (found the UB), NOTE: made the test abstract to find the desired UB
+What happens at the "diagnostic required" line - converting a pointer to an unsigned integer - is not Undefined Behavior.
+
+The first Undefined Behavior that happens in this program is not on the "diagnostic required" line. Before defereferencing past the end of the `name` buffer the program will perform memory access in the while loop controlling expression `*path != '\\'` which is the Undefined Behavior that TrustInSoft detects here.
+
+A modified version of this test with the string `str` made abstract was added. For this version TrustInSoft finds the desired Undefined Behavior.
 
 ### invptr_e05
 
@@ -513,19 +523,25 @@ No Undefined Behavior detected, as expected.
 
 ### invptr_e12
 
-TODO
+OK : TRUE POSITIVE
+
+Undefined Behavior detected as expected.
 
 ## ioileave
 
 ### ioileave_e01
 
-NIY (interleaving reads and writes to a file)
+NOT IMPLEMENTED YET
+
+Interleaving input and output operations on a file without an intervening flush or positioning call is Undefined Behavior according to the C Standard. TrustInSoft currently does not detect it.
 
 ## liberr
 
 ### liberr_e01
 
-CHECK
+NO UB
+
+Not checking the return value of `fseek()` for error conditions is not Undefined Behavior. Also even in case of an error happening in `fseek()`, passing concerned file subsequently to `fread()` is not Undefined Behavior neither.
 
 ### liberr_e02
 
@@ -549,19 +565,27 @@ No Undefined Behavior detected, as expected.
 
 ### libmod_e01
 
-NIY (modifying the string returned from setlocale)
+NOT IMPLEMENTED YET
+
+Modifying the string returned from `setlocale` is indeed Undefined Behavior. TrustInSoft currently does not detect it.
 
 ### libmod_e02
 
-NIY (modifying the string returned from localeconv)
+NOT IMPLEMENTED YET
+
+Modifying the string returned from `localeconv` is indeed Undefined Behavior. TrustInSoft currently does not detect it.
 
 ### libmod_e03
 
-NIY (modifying the string returned from getenv)
+NOT IMPLEMENTED YET
+
+Modifying the string returned from `getenv` is indeed Undefined Behavior undetected currently by TrustInSoft.
 
 ### libmod_e04
 
-NIY (modifying the string returned from strerror)
+NOT IMPLEMENTED YET
+
+Modifying the string returned from `strerror` is indeed Undefined Behavior undetected currently by TrustInSoft.
 
 ## libptr
 
@@ -575,9 +599,17 @@ Undefined Behavior detected as expected.
 
 NO UB
 
-In this example Undefined Behavior only happens if the size of `int` is larger than the size of `float`. Unfortunately on all the architectures that TrustInSoft currently handles the size of `int` is smaller or equal than the size of `float`. Therefore the call to `memset` is always vald - it will never go out of the array's bounds.
+In this example Undefined Behavior only happens if the size of `int` is larger than the size of `float`. Unfortunately all the architectures that TrustInSoft currently handles the size of `int` is smaller or equal than the size of `float`. Therefore the call to `memset` is always valid - it will never go out of the array's bounds.
+
+Architecures where this would be an Undefined Behavior exist (e.g. ilp64) and being able to model them is in TrustInSoft's roadmap.
 
 ### libptr_e03
+
+NO UB
+
+The variable `n` will be equal to size of type `int`, which is smaller that the size of type `double`. Therefore the call `memcpy(p, q, n)` may have unexpected results, but all no invalid read nor write is possible, so no Undefined Behavior will happen here.
+
+In order to have Undefined Behavior here it would be necessary for size of type `int` to be larger that the size of `double`.
 
 ### libptr_e04
 
@@ -587,13 +619,31 @@ Undefined Behavior detected as expected.
 
 ### libptr_e05
 
+NO UB
+
+As `q` is a `wchar_t` pointer and when it is allocated the result of `malloc()` is casted to `wchar_t *`, most probably the intention of programmer was to compute `n` as size of the type `wchar_t` times length of wide string `L"Hello, World!"`. Instead `sizeof(p)` returns the size of a pointer, not size of the type `wchar_t *`. The desired expression was probably `sizof(*p)`.
+
+However, this is not Undefine Behavior by itself. And there is no way to make it an Undefined Behavior, because the allocated buffer is never used.
+
 ## libuse
 
 ### libuse_e01
 
+NOT IMPLEMENTED YET
+
+There is effectively an Undefined Behavior caused to accessing the results of first call to `getenv()` after calling `getenv()` again in this example. TrustInSoft currently does not detect it.
+
 ### libuse_e02
 
+NOT IMPLEMENTED YET
+
+There is effectively an Undefined Behavior caused to accessing the results of first call to `setlocale()` after calling `setlocale()` again in this example. TrustInSoft currently does not detect it.
+
 ### libuse_e03
+
+NOT IMPLEMENTED YET
+
+There is effectively an Undefined Behavior caused to accessing the results of first call to `strerror()` after calling `strerror()` again in this example. TrustInSoft currently does not detect it.
 
 ## nonnullstr
 
@@ -605,11 +655,19 @@ Undefined Behavior detected as expected.
 
 ### nonnullstr_e02
 
-MISPLACED "REQUIRED DIAGNOSTIC" (reading uninitialized memory)
+MISPLACED "REQUIRED DIAGNOSTIC"
+
+The string `cur_msg`, passed to `wcslen()`, is not only null-terminated, it is completely uninitialized. This is the Undefined Behavior that TrustInSoft detects here.
+
+Corrected example was created, where the string is initialized. We can see that TrustInSoft still detects the Undefined Behavior in the same place, this time because the string is invalid - not null-terminated.
 
 ### nonnullstr_e03
 
-MISPLACED "REQUIRED DIAGNOSTIC" (reading uninitialized memory)
+UB
+
+Again same thing happens as in the previous example - the string passed to `wcslen()` is completely uninitialized - so TrustInSoft detects Undefined Behavior.
+
+And again a corrected example was created, where the string is initialized. We can see that in this case TrustInSoft detects the Undefined Behavior caused by not null-terminated string, as desired.
 
 ## nullref
 
@@ -623,13 +681,21 @@ Undefined Behavior detected as expected.
 
 ### padcomp_e01
 
-CHECK
+TODO
 
 ## ptrcomp
 
 ### ptrcomp_e01
 
-OK (UB detected in the log)
+OK
+
+The Undefined Behavior concerns strict aliasing properties - the appropriate warning can be found in the *Analyzer Log* tab:
+
+```bash
+tests/ptrcomp/ptrcomp_e01.c:81:[sa] warning: The pointer ip has type int *. It violates strict aliasing rules by accessing
+              a cell with effective type float.
+              Callstack: test_function :: tests/ptrcomp/ptrcomp_e01.c:66 <- main
+```
 
 ## ptrobj
 
@@ -647,9 +713,11 @@ No Undefined Behavior detected, as expected.
 
 ### ptrobj_ex2
 
-TYPO! (there is a typo in the example - 'subrtact')
+TYPO
 
-OK (no false positive), NOTE: there was a typo in the example! s/'subrtact'/'subtract'/g
+There is a typo in the example - `subrtact` instead of `substract`.
+
+A corrected example, with `subrtact` changed to `substract`, was added. As expected, TrustInSoft does not detect any Undefined Behavior ins such case.
 
 ## resident
 
@@ -659,11 +727,15 @@ Checking for reserved identifiers is out of scope of TrustInSoft.
 
 ### resident_e01
 
-NIY (defining reserved identifier errno)
+OUT OF SCOPE
+
+Defining reserved identifier `errno`.
 
 ### resident_e02
 
-NIY (defining reserved symbol _RESIDENT_HEADER_H)
+OUT OF SCOPE
+
+Defining reserved symbol `_RESIDENT_HEADER_H`.
 
 ### resident_e03
 
@@ -673,7 +745,9 @@ No Undefined Behavior detected, as expected.
 
 ### resident_e04
 
-NIY (defining reserved file scope identifier _limit)
+OUT OF SCOPE
+
+Defining reserved file scope identifier `_limit`.
 
 ### resident_e05
 
@@ -683,7 +757,11 @@ No Undefined Behavior detected, as expected.
 
 ### resident_e06
 
-HALF! OK (detected reusing identifier SIZE_MAX), NIY (defining reserved identifier INTFAST16_LIMIT_MAX)
+PARTLY OK, PARTLY OUT OF SCOPE
+
+TrustInSoft detected correctly reusing the identifier `SIZE_MAX`.
+
+Still, defining reserved identifier `INTFAST16_LIMIT_MAX` is out of scope.
 
 ### resident_e07
 
@@ -693,7 +771,9 @@ No Undefined Behavior detected, as expected.
 
 ### resident_e08
 
-NIY (defining reserved identifier 'malloc()' and 'free()')
+OUT OF SCOPE
+
+Defining reserved identifiers `malloc()` and `free()`.
 
 ### resident_e09
 
@@ -705,21 +785,25 @@ No Undefined Behavior detected, as expected.
 
 ### restrict_e01
 
-NO UB (the memory zones passed to memcpy do not overlap)
+NO UB
 
-CHECK
+The memory zones passed to `memcpy` do not overlap here, so this example does not contain Undefined Behavior.
 
-OK (UB detected), NOTE: the memory zones passed to memcpy made to overlap
+A corrected version of this example, where the memory zones passed to `memcpy` were made to overlap. In this case TrustInSoft detects the desired Undefined Behavior.
 
 ### restrict_e02
 
-NIY (qualifier 'restrict')
+NOT IMPLEMENTED YET
+
+TrustInSoft does not handle the qualifier `restrict` in general.
 
 ## sigcall
 
 ### sigcall_e01
 
-SKIP - CONCURRENT - SIGNALS
+OUT OF SCOPE
+
+TrustInSoft does not handle signals.
 
 ## signconv
 
@@ -731,7 +815,13 @@ CHECK
 
 ### sizeofptr_e01
 
-CHECK
+NO UB
+
+Most probably the intention of the programmer when writing `sizeof(array)` was to compute the whole size of the array `i`, i.e. `int[10]`. Instead this the expression will have the value of the size of a pointer. So instead of iterating over the whole array, the `for` loop will most probably iterate over just two first cells (the exact number might depend on the architecture, as it depends on the size of `int` type and size of a pointer). This may be unexpected behavior, but the program will not cause Undefined Behavior.
+
+Using the TrustInSoft GUI (click on the *Inspect with TrustInSoft Analyzer* button in the *Summary* tab) we can inspect the values of `i` in this case.
+
+NOTE: By the way, it is forbidden to give incomplete types, like `int array[]`, as arguments to `sizeof`. However, the type of `int array[]` is actually complete in this particular case, as it is used for a function argument, so can be safely used as an argument to 'sizeof'. See [C17#6.7.6.2.p4](https://cigix.me/c17#6.7.6.2.p4).
 
 ## strmod
 
@@ -775,19 +865,27 @@ No Undefined Behavior detected, as expected.
 
 ### swtchdflt_e01
 
+NO UB
+
+Having a non-exhaustive switch statement is not Undefined Behavior.
+
 ## syscall
+
+Handling calls to `system()` is out of scope.
+
+Using TrustInSoft to analyze where does the data passed to arguments of the `system()` function comes from is possible if needed, but is not done automatically.
 
 ### syscall_e01
 
-SKIP
+OUT OF SCOPE
 
-system()
+TrustInSoft does not handle calls to `system()`.
 
 ### syscall_e02
 
-SKIP
+OUT OF SCOPE
 
-system()
+TrustInSoft does not handle calls to `system()`.
 
 ## taintformatio
 
@@ -807,9 +905,9 @@ Undefined Behavior detected as expected.
 
 ### taintnoproto_e01
 
-NO UB (maybe the behavior is unexpected, but this code is correct - the type of 'int array[]' is complete, so can be used as an argument to 'sizeof' - see https://cigix.me/c17#6.7.6.2.p4)
+NO UB
 
-CHECK
+This case is almost exactly the same as `sizeofptr_e01`.
 
 ## taintsink
 
@@ -855,21 +953,35 @@ Undefined Behavior detected as expected.
 
 ### uninitref_e04
 
-OK : TRUE POSITIVE
-
-Undefined Behavior detected as expected.
-
 MISPLACED "REQUIRED DIAGNOSTIC"
+
+Undefined Behavior detected as expected, but the actual first access to unitialized memory happens just before the "diagnostic required" line - in the expression `a[i] < 0`.
 
 ## usrfmt
 
 ### usrfmt_e01
 
+OK : TRUE POSITIVE
+
+Undefined Behavior detected as expected.
+
+NOTE: There is more than one problem detected here.
+
 ### usrfmt_e02
+
+OK : TRUE POSITIVE
+
+Undefined Behavior detected as expected.
+
+NOTE: There is more than one problem detected here.
 
 ### usrfmt_e03
 
-OK (UB detected), NOTE: there is more than one problem here
+OK : TRUE POSITIVE
+
+Undefined Behavior detected as expected.
+
+NOTE: There is more than one problem detected here.
 
 ### usrfmt_e04
 
@@ -877,18 +989,30 @@ OK : TRUE NEGATIVE
 
 No Undefined Behavior detected, as expected.
 
+## xfilepos
+
 ### xfilepos_002
 
-NIY (checking if 'fsetpos' argument always comes from 'fgetpos')
+NOT IMPLEMENTED YET
 
-## xfilepos
+Checking if `fsetpos()` argument always comes from a previous successful call to `fgetpos()` is currently not implemented in TrustInSoft.
 
 ### xfilepos_e01
 
-NIY (checking if 'fsetpos' argument always comes from 'fgetpos')
+NOT IMPLEMENTED YET
+
+Checking if `fsetpos()` argument always comes from a previous successful call to `fgetpos()` is currently not implemented in TrustInSoft.
 
 ## xfree
 
 ### xfree_e01
 
+OK : TRUE POSITIVE
+
+Undefined Behavior detected as expected.
+
 ### xfree_e02
+
+OK : TRUE POSITIVE
+
+Undefined Behavior detected as expected.
