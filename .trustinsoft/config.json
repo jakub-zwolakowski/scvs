@@ -189,7 +189,7 @@
         ]
     },
     {
-        "name":"chreof_e01 : NO UB",
+        "name":"chreof_e01 : NO UB (storing results of 'getchar()' in a 'char' is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/chreof/chreof_e01.c"
@@ -204,7 +204,7 @@
         }
     },
     {
-        "name":"chreof_e02 : CHECK",
+        "name":"chreof_e02 : NO UB (storing results of 'getwc()' in a 'wchar_t' is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/chreof/chreof_e02.c"
@@ -226,7 +226,7 @@
         ]
     },
     {
-        "name":"chrsgnext_e01 : ADDED AN INVALID CALL TO 'isspace()'",
+        "name":"chrsgnext_e01 MODIFIED : ADDED AN INVALID CALL TO 'isspace()'",
         "prefix_path":"..",
         "files":[
             "tests/chrsgnext/chrsgnext_e01_invalid_argument.c"
@@ -242,19 +242,10 @@
         "slevel":100
     },
     {
-        "name":"dblfree_e02 : NO UB (no double free happening in any possible program execution, see https://cigix.me/c17#7.22.3.5.p3)",
+        "name":"dblfree_e02 : NO UB (no double free happening in any possible program execution",
         "prefix_path":"..",
         "files":[
             "tests/dblfree/dblfree_e02.c"
-        ],
-        "val-profile":"analyzer",
-        "slevel":100
-    },
-    {
-        "name":"dblfree_e02 : VERSION WITH size = 0",
-        "prefix_path":"..",
-        "files":[
-            "tests/dblfree/dblfree_e02_size_zero.c"
         ],
         "val-profile":"analyzer",
         "slevel":100
@@ -296,7 +287,7 @@
         "slevel":100
     },
     {
-        "name":"fileclose_e01 : CHECK (not closing a file is not UB)",
+        "name":"fileclose_e01 : NO UB (not closing a file is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/fileclose/fileclose_e01.c"
@@ -310,7 +301,7 @@
         }
     },
     {
-        "name":"fileclose_e02 : NO UB (resource leak is not UB), STILL: DETECTED IN THE LOG",
+        "name":"fileclose_e02 : NO UB (resource leak is not Undefined Behavior), STILL: DETECTED IN THE LOG",
         "prefix_path":"..",
         "files":[
             "tests/fileclose/fileclose_e02.c"
@@ -348,7 +339,7 @@
         ]
     },
     {
-        "name":"funcdecl_e04 : CHECK",
+        "name":"funcdecl_e04 : OUT OF SCOPE",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e04a.c",
@@ -367,7 +358,7 @@
         ]
     },
     {
-        "name":"intoflow_e01 : NO UB (TYPO?... There cannot be a signed overflow on an 'unsigned int' value.)",
+        "name":"intoflow_e01 : NO UB (TYPO? There cannot be a signed overflow on an 'unsigned int' value.)",
         "prefix_path":"..",
         "files":[
             "tests/intoflow/intoflow_e01.c"
@@ -376,7 +367,7 @@
         "slevel":100
     },
     {
-        "name":"intoflow_e01 : OK (UB detected), NOTE: changed 'add(unsigned int ui)' to 'add(int ui)'",
+        "name":"intoflow_e01 : CORRECTED VERSION : OK (UB detected), NOTE: changed 'add(unsigned int ui)' to 'add(int ui)'",
         "prefix_path":"..",
         "files":[
             "tests/intoflow/intoflow_e01_corrected.c"

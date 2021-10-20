@@ -6,13 +6,13 @@
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### accfree_e02
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### accfree_e03
 
@@ -64,7 +64,7 @@ TrustInSoft does not handle signals.
 
 MISPLACED "REQUIRED DIAGNOSTIC"
 
-Assigning an *escaping address* to a global variable is not Undefined Behavior.
+What happens at the "diagnostic required" line - assigning an *escaping address* to a global variable - is not Undefined Behavior.
 
 TrustInSoft correctly detects Undefined Behavior here when the *escaping address* is actually used - on line 72 in the statement `puts(p);`.
 
@@ -72,7 +72,7 @@ TrustInSoft correctly detects Undefined Behavior here when the *escaping address
 
 MISPLACED "REQUIRED DIAGNOSTIC"
 
-Returning an *escaping address* from a function is not Undefined Behavior.
+What happens at the "diagnostic required" line - returning an *escaping address* from a function - is not Undefined Behavior.
 
 TrustInSoft correctly detects Undefined Behavior here when the *escaping address* is actually used - on line 65 in the expression `!init_array()`.
 
@@ -80,17 +80,19 @@ TrustInSoft correctly detects Undefined Behavior here when the *escaping address
 
 NO UB
 
-Holding an *escaping address* in a local variable is not Undefined Behavior.
+Holding an *escaping address* in a local variable is not Undefined Behavior. As this *escaping address* is never actually used, there is no Undefined Behavior in this example.
 
 ## alignconv
 
 ### alignconv_e01
 
-Not Implemented Yet
+NOT IMPLEMENTED YET
+
+This is Undefined Behavior according to the C Standard - indeed there is no guarantee neither that `(int *)&c != 0` nor that `(char*)(int*)&c == &c`.
 
 Expert quote:
 
-> Ils ont raison, le premier exemple est UB d'après le standard, il n'y a pas de garantie que (int*)&c != 0 ou que (char*)(int*)&c == &c. Par contre dans une discussion avec un développeur de GCC j'ai appris que c'était “presque comme si c'était documenté” (çad c'est documenté mais la documentation est une réponse à un bug report ou une discussion dans la mailing list des développeurs GCC) que GCC, pour les cibles qu'il vise, a une représentation uniforme des pointeurs et garantit exactement les deux propriétés dont il est question.
+> Ils ont raison, le premier exemple est UB d'après le standard, il n'y a pas de garantie que `(int*)&c != 0` ou que `(char*)(int*)&c == &c`. Par contre dans une discussion avec un développeur de GCC j'ai appris que c'était “presque comme si c'était documenté” (çad c'est documenté mais la documentation est une réponse à un bug report ou une discussion dans la mailing list des développeurs GCC) que GCC, pour les cibles qu'il vise, a une représentation uniforme des pointeurs et garantit exactement les deux propriétés dont il est question.
 
 ### alignconv_e02
 
@@ -104,25 +106,25 @@ No Undefined Behavior detected, as expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### argcomp_e02
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Incompatible Declaration detected as expected.
 
 ### argcomp_e03
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Incompatible Declaration detected as expected.
 
 ### argcomp_e04
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Incompatible Declaration detected as expected.
 
 ## asyncsig
 
@@ -152,9 +154,15 @@ TrustInSoft does not handle signals.
 
 NO UB (infinite loop)
 
+Using an assignment expression (i.e. `x = y`) as a loop controlling expression is usually a typo and may cause unexpected behavior, but it is not Undefined Behavior.
+
+Moreover, both `gcc` and `clang` find this kind of possible typos and suggest adding parentheses around the assingment expression if it was really intended to be an assignment and not a comparison.
+
 ### boolasgn_e02
 
 NO UB (infinite loop)
+
+Exactly the same explanation as in the previous case - `boolasgn_e01`.
 
 ### boolasgn_e03
 
@@ -178,6 +186,8 @@ No Undefined Behavior detected, as expected.
 
 NO UB
 
+CHECK
+
 ### boolasgn_e07
 
 OK : TRUE NEGATIVE
@@ -188,11 +198,15 @@ No Undefined Behavior detected, as expected.
 
 ### chreof_e01
 
-CHECK
+NO UB
+
+WRITE THE EXPLANATION
 
 ### chreof_e02
 
-CHECK
+NO UB
+
+WRITE THE EXPLANATION
 
 ## chrsgnext
 
@@ -212,7 +226,7 @@ NOTE: in `glibc`, the lookup table which is used inside the implementation of th
 
 NO UB
 
-Calling `free()` with null pointer as argument does nothing. We can repeat it as many times as we want - this is not Undefined Behavior.
+Calling `free()` with null pointer as argument does nothing. We can repeat it as many times as we want - this is not Undefined Behavior. There is no possible execution of this program where a double free happens.
 
 ### dblfree_e02
 
@@ -242,25 +256,25 @@ The description contradicts the C17 standard, which states that if this call to 
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### diverr_e02
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### diverr_e03
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### diverr_e04
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ## fileclose
 
@@ -268,13 +282,17 @@ Undefined Behavior detected where expected.
 
 NO UB
 
-Leaving a file open when program exits is technically not Undefined Behavior. However, as certain execution environments do not guarantee the open files to be in a coherent state after the program exists without closing them properly, this feature is in TrustInSoft's roadmap.
+Leaving a file open when program exits is technically not Undefined Behavior. However, as certain execution environments do not guarantee the open files to be in a coherent state after the program exits without closing them properly, this feature is in TrustInSoft's roadmap.
 
 ### fileclose_e02
 
 NO UB
 
-Memory leak is not Undefined Behavior. Still, TrustInSoft is capable of detectig such problems - the appropriate warning can be found in the *Analyzer Log* tab.
+Memory leak is not Undefined Behavior. Still, TrustInSoft is capable of detecting such issues - the appropriate warning can be found in the *Analyzer Log* tab:
+
+```bash
+tests/fileclose/fileclose_e02.c:78:[value] warning: memory leak detected for {__malloc_fun_l84}
+```
 
 ## filecpy
 
@@ -288,25 +306,25 @@ TODO
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### funcdecl_e02
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### funcdecl_e03
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### funcdecl_e04
 
 OUT OF SCOPE
 
-TrustInSoft does not handle compilers which truncate variable names at 8 characters.
+TrustInSoft expects that the compiler will not truncate variable names at 8 characters.
 
 ### funcdecl_ex1
 
@@ -318,9 +336,24 @@ No Undefined Behavior detected, as expected.
 
 ### intoflow_e01
 
-NO UB (TYPO?... There cannot be a signed overflow on an 'unsigned int' value.)
+NO UB
 
-OK (UB detected), NOTE: changed 'add(unsigned int ui)' to 'add(int ui)'
+Is this a typo? The test's description talks about integer overflow:
+
+```C
+ * Rule: [intoflow]
+ * Description: diagnostic is required on implementations that trap on 
+ *              signed integer overflow because the expression x + 1 may 
+ *              result in signed integer overflow
+ * Diagnostic: required on line 79
+```
+
+However, the only variables that get incremented in this program ar `i` and `ui`:
+
+* The variable `i` only goes from 1 to 10. So there cannot be a be a overflow here.
+* And the variable `ui` is not a signed integer but an `usigned int`. There cannot be a signed overflow on an `unsigned int` value.
+
+Added a corrected version - changed `add(unsigned int ui)` to `add(int ui)` and now TrustInSoft detects this Undefined Behavior as expected.
 
 ### intoflow_e02
 
@@ -390,7 +423,7 @@ Note, that in this particular example TrustInSoft can find that the `if` branch 
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ## invfmtstr
 
@@ -398,7 +431,7 @@ Undefined Behavior detected where expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ## invptr
 
@@ -406,7 +439,7 @@ Undefined Behavior detected where expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### invptr_e02
 
@@ -438,7 +471,7 @@ No Undefined Behavior detected, as expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### invptr_e07
 
@@ -450,7 +483,7 @@ No Undefined Behavior detected, as expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### invptr_e09
 
@@ -462,7 +495,7 @@ No Undefined Behavior detected, as expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### invptr_e11
 
@@ -528,7 +561,7 @@ NIY (modifying the string returned from strerror)
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### libptr_e02
 
@@ -542,7 +575,7 @@ In this example Undefined Behavior only happens if the size of `int` is larger t
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### libptr_e05
 
@@ -560,7 +593,7 @@ Undefined Behavior detected where expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### nonnullstr_e02
 
@@ -576,7 +609,7 @@ MISPLACED "REQUIRED DIAGNOSTIC" (reading uninitialized memory)
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ## padcomp
 
@@ -596,7 +629,7 @@ OK (UB detected in the log)
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### ptrobj_ex1
 
@@ -698,7 +731,7 @@ CHECK
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### strmod_e02
 
@@ -710,19 +743,19 @@ No Undefined Behavior detected, as expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### strmod_e04
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### strmod_e05
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### strmod_e06
 
@@ -754,13 +787,13 @@ system()
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### taintformatio_e02
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ## taintnoproto
 
@@ -776,13 +809,13 @@ CHECK
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### taintsink_e02
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ## taintstrcpy
 
@@ -790,7 +823,7 @@ Undefined Behavior detected where expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ## uninitref
 
@@ -798,25 +831,25 @@ Undefined Behavior detected where expected.
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### uninitref_e02
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### uninitref_e03
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 ### uninitref_e04
 
 OK : TRUE POSITIVE
 
-Undefined Behavior detected where expected.
+Undefined Behavior detected as expected.
 
 MISPLACED "REQUIRED DIAGNOSTIC"
 
