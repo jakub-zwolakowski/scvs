@@ -308,7 +308,7 @@
         ]
     },
     {
-        "name":"filecpy_e01 : TODO",
+        "name":"filecpy_e01 : NO UB (not sure though!)",
         "prefix_path":"..",
         "files":[
             "tests/filecpy/filecpy_e01.c"
@@ -367,7 +367,7 @@
         "slevel":100
     },
     {
-        "name":"intoflow_e01 : CORRECTED VERSION : OK (UB detected), NOTE: changed 'add(unsigned int ui)' to 'add(int ui)'",
+        "name":"intoflow_e01 : CORRECTED VERSION : OK (UB detected)",
         "prefix_path":"..",
         "files":[
             "tests/intoflow/intoflow_e01_corrected.c"
@@ -812,10 +812,16 @@
         "slevel":100
     },
     {
-        "name":"padcomp_e01 : TODO",
+        "name":"padcomp_e01 : NO UB (padding zero-initialized, identical prefix)",
         "prefix_path":"..",
         "files":[
             "tests/padcomp/padcomp_e01.c"
+        ]
+    },    {
+        "name":"padcomp_e01 : CORRECTED VERSION : UB detected",
+        "prefix_path":"..",
+        "files":[
+            "tests/padcomp/padcomp_e01_corrected.c"
         ]
     },
     {
