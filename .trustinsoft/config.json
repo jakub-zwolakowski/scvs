@@ -15,28 +15,47 @@
         "val-args":" 42"
     },
     {
-        "name":"accfree_e03 : OK (UB detected)",
+        "name":"accfree_e03 : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e03.c"
-        ]
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
     },
     {
-        "name":"accsig_e01 : SKIP - CONCURRENT - SIGNALS",
+        "name":"accfree_e03 : CORRECTED VERSION : NO UB",
+        "prefix_path":"..",
+        "files":[
+            "tests/accfree/accfree_e03_corrected.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },    {
+        "name":"accfree_e03 : VERSION WITH size = 0",
+        "prefix_path":"..",
+        "files":[
+            "tests/accfree/accfree_e03_size_zero.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
+        "name":"accsig_e01 : OUT OF SCOPE (signals)",
         "prefix_path":"..",
         "files":[
             "tests/accsig/accsig_e01.c"
         ]
     },
     {
-        "name":"addrescape_e01 : MISPLACED UB",
+        "name":"addrescape_e01 : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e01.c"
         ]
     },
     {
-        "name":"addrescape_e02 : MISPLACED UB",
+        "name":"addrescape_e02 : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e02.c"
@@ -50,7 +69,7 @@
         ]
     },
     {
-        "name":"alignconv_e01 : NIY (pointer alignment)",
+        "name":"alignconv_e01 : NOT IMPLEMENTED YET (pointer alignment)",
         "prefix_path":"..",
         "files":[
             "tests/alignconv/alignconv_e01.c"
@@ -95,21 +114,21 @@
         ]
     },
     {
-        "name":"asyncsig_e01 : SKIP - CONCURRENT - SIGNALS",
+        "name":"asyncsig_e01 : OUT OF SCOPE (signals)",
         "prefix_path":"..",
         "files":[
             "tests/asyncsig/asyncsig_e01.c"
         ]
     },
     {
-        "name":"asyncsig_e02 : SKIP - CONCURRENT - SIGNALS",
+        "name":"asyncsig_e02 : OUT OF SCOPE (signals)",
         "prefix_path":"..",
         "files":[
             "tests/asyncsig/asyncsig_e02.c"
         ]
     },
     {
-        "name":"asyncsig_e03 : SKIP - CONCURRENT - SIGNALS",
+        "name":"asyncsig_e03 : OUT OF SCOPE (signals)",
         "prefix_path":"..",
         "files":[
             "tests/asyncsig/asyncsig_e03.c"
@@ -375,14 +394,14 @@
         "slevel":100
     },
     {
-        "name":"intptrconv_005 : OK (detected a different UB) : MISPLACED UB",
+        "name":"intptrconv_005 : OK (detected a different UB) : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_005.c"
         ]
     },
     {
-        "name":"intptrconv_e01 : OK (detected a different UB) : MISPLACED UB",
+        "name":"intptrconv_e01 : OK (detected a different UB) : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_e01.c"
@@ -410,21 +429,21 @@
         ]
     },
     {
-        "name":"inverrno_e01 : TODO",
+        "name":"inverrno_e01 : NO UB (not following one of the standard 'errno' coding pattern is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e01.c"
         ]
     },
     {
-        "name":"inverrno_e02 : TODO",
+        "name":"inverrno_e02 : NO UB (not following one of the standard 'errno' coding pattern is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e02.c"
         ]
     },
     {
-        "name":"inverrno_e03 : TODO",
+        "name":"inverrno_e03 : NO UB (not following one of the standard 'errno' coding pattern is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e03.c"
@@ -466,7 +485,7 @@
         ]
     },
     {
-        "name":"invptr_e04 : OK (found the UB) : MISPLACED UB",
+        "name":"invptr_e04 : OK (found the UB) : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e04.c"
@@ -751,7 +770,7 @@
         ]
     },
     {
-        "name":"nonnullstr_e02 : MISPLACED UB (reading uninitialized memory)",
+        "name":"nonnullstr_e02 : MISPLACED 'REQUIRED DIAGNOSTIC' (reading uninitialized memory)",
         "prefix_path":"..",
         "files":[
             "tests/nonnullstr/nonnullstr_e02.c"
@@ -764,7 +783,7 @@
         ]
     },
     {
-        "name":"nonnullstr_e03 : MISPLACED UB (reading uninitialized memory)",
+        "name":"nonnullstr_e03 : MISPLACED 'REQUIRED DIAGNOSTIC' (reading uninitialized memory)",
         "prefix_path":"..",
         "files":[
             "tests/nonnullstr/nonnullstr_e03.c"
@@ -1089,7 +1108,7 @@
         ]
     },
     {
-        "name":"uninitref_e04 : OK (UB detected) : MISPLACED UB",
+        "name":"uninitref_e04 : OK (UB detected) : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e04.c"

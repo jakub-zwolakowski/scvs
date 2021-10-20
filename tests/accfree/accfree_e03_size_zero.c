@@ -66,13 +66,15 @@
 void f(char *, size_t);
 
 int main(void) {
-  char s[MAX_LEN];
-
-  f(s, MAX_LEN);
+  char *s = malloc(MAX_LEN);
+  if (s) {
+    f(s, MAX_LEN);
+  }
   return EXIT_SUCCESS;
 }
 
 void f(char *c_str1, size_t size) {
+  size = 0;
   char *c_str2 = (char *)realloc(c_str1, size);
   if (c_str2 == NULL) {
     free(c_str1); // diagnostic required
