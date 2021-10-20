@@ -192,7 +192,18 @@ No Undefined Behavior detected, as expected.
 
 NO UB
 
-CHECK
+I believe there is no Undefined Behavior in this example. Although I am not sure what the description means and what problem was expected to appear here:
+
+```C
+ * Rule: [boolasgn]
+ * Description: diagnostic is required because && is not a comparison 
+ *              operator and the entire expression is not primary.
+ * Diagnostic: required on line 68
+ * Additional Test Files: None
+ * Command-line Options: None
+```
+
+Either way `gcc` and `clang` don't emit any warnings.
 
 ### boolasgn_e07
 
@@ -304,7 +315,20 @@ tests/fileclose/fileclose_e02.c:78:[value] warning: memory leak detected for {__
 
 ### filecpy_e01
 
-TODO
+NO UB - NOT SURE
+
+This one is pretty unclear! Most probably it is not Undefined Behavior, but Unspecified Behavior.
+
+The [C17 Standard says](https://cigix.me/c17#7.21.3.p6):
+
+> The address of the FILE object used to control a stream may be significant; a copy of a FILE object need not serve in place of the original.
+
+The example copies the FILE object used to control the `stdout` stream and then uses that copy. The copy operation itself is not a problem, however when this copy is used then something bad might happen - apparently compiling and running this example in a particular environment (e.g. compiling in Microsoft Visual Studio 2013 and running on Windows) can cause "access violation" runtime error.
+
+After some consideration we decided to categorize this as Unspecified Behavior, as:
+
+* the operation of copying a FILE object is completely valid according to the C17 Standard,
+* using the copied FILE object is not officially Undefined Behavior neither and does not seem to cause any trouble in most situations.
 
 ## funcdecl
 
@@ -681,7 +705,19 @@ Undefined Behavior detected as expected.
 
 ### padcomp_e01
 
-TODO
+NO UB
+
+There are two reasons why there is no Undefined Behavior detected here:
+
+* As the variables `a` and `b` are static (their declaration is `static buffer a, b;`), both structures are zero-initialized, including their padding. Therefore the padding is initialized and can be read.
+* As the structures `a` and `b` differ already on the value of their first field (for the structure `a` the value of `buff_type` is `'a'`, for the structure `b` it's `'b'`), the `memcmp()` function does not go any further in order to return the result. Therefore in such situation it will not read the padding data at all.
+
+A corrected example was added that removes both reasons:
+
+* The definition of `a` and `b` was changed to a non-static one, i.e. `buffer a, b;`.
+* The values of the field `buff_type` of `a` and `b` were made the same.
+
+Now padding data will be actually accessed by `memcpy()` and so TrustInSoft correctly detects this as Undefined Behavior.
 
 ## ptrcomp
 
@@ -809,7 +845,7 @@ TrustInSoft does not handle signals.
 
 ### signconv_e01
 
-CHECK
+TODO
 
 ## sizeofptr
 
