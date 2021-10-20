@@ -1114,6 +1114,7 @@
         "val-profile":"analyzer",
         "slevel":100,
         "filesystem":{
+            "system_errors":false,
             "files":[
                 {
                     "name":"catalog"
@@ -1130,6 +1131,7 @@
         "val-profile":"analyzer",
         "slevel":100,
         "filesystem":{
+            "system_errors":false,
             "files":[
                 {
                     "name":"catalog"
