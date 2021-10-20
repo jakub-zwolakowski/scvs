@@ -32,7 +32,7 @@
         "val-profile":"analyzer",
         "slevel":100
     },    {
-        "name":"accfree_e03 : VERSION WITH size = 0",
+        "name":"accfree_e03 : VERSION WITH size = 0 : UB detected",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e03_size_zero.c"
@@ -549,16 +549,16 @@
         "val-profile":"analyzer",
         "slevel":10000,
         "filesystem":{
+            "system_errors": false,
             "files":[
                 {
                     "name":"scvs_testfile.txt",
-                    "size": 1,
+                    "size": 3,
                     "min_val": 0,
-                    "max_val": 0
+                    "max_val": 255
                 }
             ]
-        },
-        "val-timeout":30
+        }
     },
     {
         "name":"ioileave_e01 : NIY (interleaving reads and writes to a file)",

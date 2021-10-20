@@ -43,10 +43,14 @@ But in the [C17 section *The realloc function* in paragraph 3](https://cigix.me/
 
 The example's description directly contradicts the C17 standard, which states that if this call to `realloc` returns `NULL` then it cannot free `c_str1` in the same time.
 
-SIDE NOTE: Possible confusion may have been caused by the following statement in the C17 standard:
+Possible confusion may have been caused by the following statement in the C17 standard:
 > If size is zero and memory for the new object is not allocated, it is implementation-defined whether the old object is deallocated.
 
-For comparison an example with `size` equal zero was added and analyzed. In this case however TrustInSoft warns about yet another Undefined Behavior, caused by calling `realloc` with `size` equal zero - this is explicitly considered Undefined Behavior in the upcoming C2X standard.
+Also, [Defect Report #400](http://www.open-std.org/jtc1/sc22/wg14/www/docs/dr_400.htm) (from February 2012) could suggest that the initial idea behind this test was calling `realloc()` with `size` equal zero:
+
+> There are at least three existing `realloc` behaviors when NULL is returned; the differences only occur for a size of 0
+
+So, for comparison, an example modified to call `realloc` with `size` equal zero was added and analyzed. In this case however TrustInSoft warns about another Undefined Behavior, caused by calling `realloc` with `size` equal zero - this is explicitly considered Undefined Behavior in the upcoming C2X standard.
 
 ## accsig
 
