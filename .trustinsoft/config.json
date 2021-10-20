@@ -952,7 +952,7 @@
         ]
     },
     {
-        "name":"signconv_e01 : CHECK",
+        "name":"signconv_e01 : NO UB",
         "prefix_path":"..",
         "files":[
             "tests/signconv/signconv_e01.c"
