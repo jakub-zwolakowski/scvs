@@ -385,21 +385,21 @@
         "slevel":100
     },
     {
-        "name":"intptrconv_005 : OK (detected a different UB) : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"intptrconv_005 : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_005.c"
         ]
     },
     {
-        "name":"intptrconv_e01 : OK (detected a different UB) : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"intptrconv_e01 : MISPLACED 'REQUIRED DIAGNOSTIC'",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_e01.c"
         ]
     },
     {
-        "name":"intptrconv_e02 : NO UB (pointer created, but not used) : CHECK",
+        "name":"intptrconv_e02 : NO UB (pointer created, but not used)",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_e02.c"

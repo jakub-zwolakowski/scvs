@@ -361,25 +361,29 @@ OK : TRUE NEGATIVE
 
 No Undefined Behavior detected, as expected.
 
-### intptrconv_005
+## intptrconv
 
-OK (detected a different UB)
+### intptrconv_005
 
 MISPLACED "REQUIRED DIAGNOSTIC"
 
-## intptrconv
+What happens at the "diagnostic required" line - converting an integer number to a pointer - is not Undefined Behavior.
+
+TrustInSoft correctly detects Undefined Behavior here when this value is is actually used in a comparison - on line 68 in the expression `c > 0`.
 
 ### intptrconv_e01
 
-OK (detected a different UB)
-
 MISPLACED "REQUIRED DIAGNOSTIC"
+
+What happens at the "diagnostic required" line - converting a pointer to an unsigned integer - is not Undefined Behavior.
+
+TrustInSoft correctly detects Undefined Behavior here when this value is is actually used as an operand to a binary and operator - on line 80 in the expression `number & 0x7fffff`.
 
 ### intptrconv_e02
 
-NO UB (pointer created, but not used)
+NO UB
 
-CHECK
+What happens at the "diagnostic required" line - converting a constant number to a pointer - is not Undefined Behavior. Also what happens at the next line - returning such a value from a function - is not Undefined Behavior. This program is correct.
 
 ### intptrconv_ex1
 
