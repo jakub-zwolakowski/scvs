@@ -238,7 +238,10 @@
                     "from":"README"
                 }
             ]
-        }
+        },
+        "cpp-extra-args":[
+            "-DTIS_DETERMINISTIC_LIBC"
+        ]
     },
     {
         "name":"chrsgnext_e01 : NO UB (all the invocations of 'isspace()' are valid)",
