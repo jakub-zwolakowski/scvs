@@ -2,6 +2,16 @@
 
 TrustInSoft results on the [Secure Coding Validation Suite](https://github.com/SEI-CERT/scvs)
 
+Short description of the results classification:
+
+* **OK : TRUE POSITIVE** (x43) - TrustInSoft correctly detects an Undefined Behavior exactly where the test description says that a diagnostic is required.
+* **OK : TRUE NEGATIVE** (x26) - TrustInSoft guarantees no Undefined Behavior and the test description agrees that no diagnostic is required.
+* **NO UB** (x27) - TrustInSoft does not detect Undefined Behavior, because effectively there is no Undefined Behavior in the test, even though the test description says that a diagnostic is required.
+* **UB** (x1) - TrustInSoft detects Undefined Behavior, and effectively there is Undefined Behavior in the test, even though the test description says that no diagnostic is required.
+* **MISPLACED "REQUIRED DIAGNOSTIC"** (x8) - TrustInSoft correctly detects a different Undefined Behavior than the one that the test's description suggests.
+* **NOT IMPLEMENTED YET** (x12) - detecting a particular Undefined Behavior is not implemented yet by TrustInSoft. It may be in the roadmap.
+* **OUT OF SCOPE** (x12) - the test's analysis was not finalized, it was decided to be out-of-scope for some reason (e.g. I decided to concentrate on sequential examples and I did not go into the ones involving concurrency and signals).
+
 ## accfree
 
 ### accfree_e01
@@ -62,8 +72,6 @@ Signal handling is out of scope.
 
 Result = **OUT OF SCOPE**
 
-TrustInSoft does not handle signals.
-
 ## addrescape
 
 ### addrescape_e01
@@ -96,9 +104,11 @@ Result = **NOT IMPLEMENTED YET**
 
 This is Undefined Behavior according to the C Standard - indeed there is no guarantee neither that `(int *)&c != 0` nor that `(char*)(int*)&c == &c`.
 
-Our Chief Scientist quote:
+Quote from Pascal Cuoq (TrustInSoft's Chief Scientist):
 
-> Ils ont raison, le premier exemple est UB d'après le standard, il n'y a pas de garantie que `(int*)&c != 0` ou que `(char*)(int*)&c == &c`. Par contre dans une discussion avec un développeur de GCC j'ai appris que c'était “presque comme si c'était documenté” (çad c'est documenté mais la documentation est une réponse à un bug report ou une discussion dans la mailing list des développeurs GCC) que GCC, pour les cibles qu'il vise, a une représentation uniforme des pointeurs et garantit exactement les deux propriétés dont il est question.
+> Ils ont raison, le premier exemple est UB d'après le standard, il n'y a pas de garantie que `(int*)&c != 0` ou que `(char*)(int*)&c == &c`. Par contre dans une discussion avec un développeur de GCC j'ai appris que c'était “presque comme si c'était documenté” (çad c'est documenté mais la documentation est une réponse à un bug report ou une discussion dans la mailing list des développeurs GCC) que GCC, pour les cibles qu'il vise, a une représentation uniforme des pointeurs et garantit exactement les deux propriétés dont il est question. Donc il faut dire que sur cet exemple particulier, le test demande un avertissement pour quelque chose de quand même bien anodin.
+
+Note that the discussion in question (*"une discussion avec un développeur de GCC"*) was related to the blog article [GCC always assumes aligned pointer accesses](https://trust-in-soft.com/blog/2020/04/06/gcc-always-assumes-aligned-pointer-accesses/).
 
 ### alignconv_e02
 
@@ -118,19 +128,19 @@ Undefined Behavior detected as expected.
 
 Result = **OK : TRUE POSITIVE**
 
-Incompatible Declaration detected as expected.
+Incompatible declaration detected as expected.
 
 ### argcomp_e03
 
 Result = **OK : TRUE POSITIVE**
 
-Incompatible Declaration detected as expected.
+Incompatible declaration detected as expected.
 
 ### argcomp_e04
 
 Result = **OK : TRUE POSITIVE**
 
-Incompatible Declaration detected as expected.
+Incompatible declaration detected as expected.
 
 ## asyncsig
 
@@ -140,19 +150,13 @@ Signal handling is out of scope.
 
 Result = **OUT OF SCOPE**
 
-TrustInSoft does not handle signals.
-
 ### asyncsig_e02
 
 Result = **OUT OF SCOPE**
 
-TrustInSoft does not handle signals.
-
 ### asyncsig_e03
 
 Result = **OUT OF SCOPE**
-
-TrustInSoft does not handle signals.
 
 ## boolasgn
 
@@ -245,6 +249,8 @@ Result = **NO UB**
 
 Exactly like the precedent case `chreof_e01`, but for wide characters.
 
+Sorry, this one cannot be analyzed in the current TIS-CI production version, because the `getwc()` library function was not plugged in correctly yet at the last deployment. It seems that the problem was corrected in the meantime, as this test works well on the [TIS-CI development version](https://dev.ci.trust-in-soft.com/) (if you want to access it, mind that this is the development version, so it is not tested and may be broken in some ways).
+
 ## chrsgnext
 
 ### chrsgnext_e01
@@ -276,7 +282,7 @@ Result = **NO UB**
 
 There is no possible execution of this program where a double free happens.
 
-This is the decription in the example:
+This is the description in the example:
 
 ```C
  * Rule: [dblfree]
@@ -712,9 +718,9 @@ Corrected example was created, where the string is initialized. We can see that 
 
 Result = **UB**
 
-Again same thing happens as in the previous example - the string passed to `wcslen()` is completely uninitialized - so TrustInSoft detects Undefined Behavior.
+Again same thing happens as in the previous example `nonnullstr_e02` - the string passed to `wcslen()` is completely uninitialized - so TrustInSoft detects Undefined Behavior here.
 
-And again a corrected example was created, where the string is initialized. We can see that in this case TrustInSoft detects the Undefined Behavior caused by not null-terminated string, as desired.
+And again a corrected example was created, where the string is initialized. We can see that in this case TrustInSoft detects the Undefined Behavior does not detect Undefined Behavior anymore as the string is always properly null-terminated.
 
 ## nullref
 
@@ -746,7 +752,7 @@ Now padding data will be actually accessed by `memcpy()` and so TrustInSoft corr
 
 ### ptrcomp_e01
 
-Result = **OK**
+Result = **OK : TRUE POSITIVE**
 
 The Undefined Behavior concerns strict aliasing properties - the appropriate warning can be found in the *Analyzer Log* tab:
 
@@ -854,15 +860,15 @@ A corrected version of this example, where the memory zones passed to `memcpy` w
 
 Result = **NOT IMPLEMENTED YET**
 
-TrustInSoft does not handle the qualifier `restrict` in general.
+TrustInSoft does not handle the qualifier `restrict` in general cases.
+
+Side note: see Pascal Cuoq's article from 2012 [Restrict is not good for modular reasoning](https://frama-c.com/2012/08/02/restrict-is-not-good-for-modular-reasoning.html) about the convoluted semantics of `restrict` and difference with the ACSL predicate `\separated`.
 
 ## sigcall
 
 ### sigcall_e01
 
 Result = **OUT OF SCOPE**
-
-TrustInSoft does not handle signals.
 
 ## signconv
 
@@ -935,21 +941,17 @@ Having a non-exhaustive switch statement is not Undefined Behavior.
 
 ## syscall
 
-Handling calls to `system()` is out of scope.
+Analyzing calls to `system()` is out of scope.
 
-Using TrustInSoft to analyze where does the data passed to arguments of the `system()` function comes from is possible if needed, but is not done automatically.
+Using TrustInSoft to analyze where does the data passed to arguments of the `system()` function comes from is possible, but such data flow analysis is not performed automatically.
 
 ### syscall_e01
 
 Result = **OUT OF SCOPE**
 
-TrustInSoft does not handle calls to `system()`.
-
 ### syscall_e02
 
 Result = **OUT OF SCOPE**
-
-TrustInSoft does not handle calls to `system()`.
 
 ## taintformatio
 
