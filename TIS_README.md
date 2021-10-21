@@ -768,9 +768,9 @@ No Undefined Behavior detected, as expected.
 
 Result = **TYPO**
 
-There is a typo in the example - `subrtact` instead of `substract`.
+There is a typo in the example - `subrtact` instead of `subtract`.
 
-A corrected example, with `subrtact` changed to `substract`, was added. As expected, TrustInSoft does not detect any Undefined Behavior ins such case.
+A corrected example, with `subrtact` changed to `subtract`, was added. As expected, TrustInSoft does not detect any Undefined Behavior ins such case.
 
 ## resident
 
