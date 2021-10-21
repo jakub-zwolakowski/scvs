@@ -202,7 +202,7 @@ No Undefined Behavior detected, as expected.
 
 Result = **NO UB**
 
-I believe there is no Undefined Behavior in this example. Although I am not sure what the description means and what problem was expected to appear here:
+I believe there is no Undefined Behavior in this example. Although I am not sure what the description means and what diagnostic was expected to appear here:
 
 ```C
  * Rule: [boolasgn]
@@ -213,7 +213,7 @@ I believe there is no Undefined Behavior in this example. Although I am not sure
  * Command-line Options: None
 ```
 
-Either way `gcc` and `clang` don't emit any warnings.
+Either way `gcc` and `clang` do not emit any warnings.
 
 ### boolasgn_e07
 

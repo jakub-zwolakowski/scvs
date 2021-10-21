@@ -361,7 +361,7 @@
         ]
     },
     {
-        "name":"funcdecl_e04 : OUT OF SCOPE",
+        "name":"funcdecl_e04 : OUT OF SCOPE (compilers which truncate variable names)",
         "prefix_path":"..",
         "files":[
             "tests/funcdecl/funcdecl_e04a.c",
