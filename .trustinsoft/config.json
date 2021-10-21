@@ -143,11 +143,33 @@
         "val-timeout":30
     },
     {
+        "name":"boolasgn_e01 : NO UB (infinite loop)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e01.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100
+    },
+    {
         "name":"boolasgn_e02 : NO UB (infinite loop)",
         "prefix_path":"..",
         "files":[
             "tests/boolasgn/boolasgn_e02.c"
         ],
+        "cpp-extra-args":[
+            "-DTIS_DETERMINISTIC_LIBC"
+        ],
+        "val-timeout":30
+    },
+    {
+        "name":"boolasgn_e02 : NO UB (infinite loop)",
+        "prefix_path":"..",
+        "files":[
+            "tests/boolasgn/boolasgn_e02.c"
+        ],
+        "val-profile":"analyzer",
+        "slevel":100,
         "cpp-extra-args":[
             "-DTIS_DETERMINISTIC_LIBC"
         ],
