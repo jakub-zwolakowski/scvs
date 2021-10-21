@@ -96,7 +96,7 @@ Result = **NOT IMPLEMENTED YET**
 
 This is Undefined Behavior according to the C Standard - indeed there is no guarantee neither that `(int *)&c != 0` nor that `(char*)(int*)&c == &c`.
 
-Expert quote:
+Our Chief Scientist quote:
 
 > Ils ont raison, le premier exemple est UB d'après le standard, il n'y a pas de garantie que `(int*)&c != 0` ou que `(char*)(int*)&c == &c`. Par contre dans une discussion avec un développeur de GCC j'ai appris que c'était “presque comme si c'était documenté” (çad c'est documenté mais la documentation est une réponse à un bug report ou une discussion dans la mailing list des développeurs GCC) que GCC, pour les cibles qu'il vise, a une représentation uniforme des pointeurs et garantit exactement les deux propriétés dont il est question.
 
@@ -163,6 +163,12 @@ Result = **NO UB (infinite loop)**
 Using an assignment expression (i.e. `x = y`) as a loop controlling expression is usually a typo and may cause unexpected behavior, but it is not Undefined Behavior.
 
 Moreover, both `gcc` and `clang` find this kind of possible typos and suggest adding parentheses around the assignment expression if it was really intended to be an assignment and not a comparison.
+
+Note that because of the infinite loop, the analysis of this case in TIS-CI with default options will never end, hence the *Timeout* result. For comparison I've included a second analysis of the same case with different options, where TrustInSoft is able to detect the loop coming to a fix point and tell that it's non-terminating. Although the TIS-CI interface is not really designed to handle such cases (it shows *Oops, an error occurred.* in the *Summary* tab), the information can be found in the *Analyzer Log* tab:
+
+```bash
+[from] Non-terminating function main (no dependencies)
+```
 
 ### boolasgn_e02
 
