@@ -140,8 +140,7 @@
         "files":[
             "tests/boolasgn/boolasgn_e01.c"
         ],
-        "val-profile":"analyzer",
-        "slevel":1000
+        "val-timeout":30
     },
     {
         "name":"boolasgn_e02 : NO UB (infinite loop)",
@@ -152,8 +151,7 @@
         "cpp-extra-args":[
             "-DTIS_DETERMINISTIC_LIBC"
         ],
-        "val-profile":"analyzer",
-        "slevel":1000
+        "val-timeout":30
     },
     {
         "name":"boolasgn_e03 : OK (no false positive)",
