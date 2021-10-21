@@ -90,7 +90,7 @@
         ]
     },
     {
-        "name":"argcomp_e02 : OK (UB detected)",
+        "name":"argcomp_e02 : OK (Incompatible declaration detected)",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e02a.c",
@@ -98,7 +98,7 @@
         ]
     },
     {
-        "name":"argcomp_e03 : OK (UB detected)",
+        "name":"argcomp_e03 : OK (Incompatible declaration detected)",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e03a.c",
@@ -106,7 +106,7 @@
         ]
     },
     {
-        "name":"argcomp_e04 : OK (UB detected)",
+        "name":"argcomp_e04 : OK (Incompatible declaration detected)",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e04a.c",
