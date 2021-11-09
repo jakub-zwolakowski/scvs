@@ -291,13 +291,14 @@
         "slevel":100
     },
     {
-        "name":"diverr_e03 : OK (UB detected)",
+        "name":"diverr_e03 : OK (no false positive)",
         "prefix_path":"..",
         "files":[
             "tests/diverr/diverr_e03.c"
         ],
         "val-profile":"analyzer",
-        "slevel":100
+        "slevel":100,
+        "acsl-import":".trustinsoft/diverr_e03_function_divide.acsl"
     },
     {
         "name":"diverr_e04 : OK (UB detected)",

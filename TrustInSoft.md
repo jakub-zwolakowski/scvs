@@ -312,9 +312,9 @@ Undefined Behavior detected as expected.
 
 ### diverr_e03
 
-Result = **OK : TRUE POSITIVE**
+Result = **OK : TRUE NEGATIVE**
 
-Undefined Behavior detected as expected.
+No Undefined Behavior detected, as expected.
 
 ### diverr_e04
 
