@@ -15,7 +15,7 @@
         "val-args":" 42"
     },
     {
-        "name":"accfree_e03 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"accfree_e03 : MISPLACED diagnostic required",
         "prefix_path":"..",
         "files":[
             "tests/accfree/accfree_e03.c"
@@ -48,14 +48,14 @@
         ]
     },
     {
-        "name":"addrescape_e01 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"addrescape_e01 : MISPLACED diagnostic required",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e01.c"
         ]
     },
     {
-        "name":"addrescape_e02 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"addrescape_e02 : MISPLACED diagnostic required",
         "prefix_path":"..",
         "files":[
             "tests/addrescape/addrescape_e02.c"
@@ -90,7 +90,7 @@
         ]
     },
     {
-        "name":"argcomp_e02 : OK (Incompatible declaration detected)",
+        "name":"argcomp_e02 : OK (incompatible declaration detected)",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e02a.c",
@@ -98,7 +98,7 @@
         ]
     },
     {
-        "name":"argcomp_e03 : OK (Incompatible declaration detected)",
+        "name":"argcomp_e03 : OK (incompatible declaration detected)",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e03a.c",
@@ -106,7 +106,7 @@
         ]
     },
     {
-        "name":"argcomp_e04 : OK (Incompatible declaration detected)",
+        "name":"argcomp_e04 : OK (incompatible declaration detected)",
         "prefix_path":"..",
         "files":[
             "tests/argcomp/argcomp_e04a.c",
@@ -211,7 +211,7 @@
         ]
     },
     {
-        "name":"chreof_e01 : NO UB (storing results of 'getchar()' in a 'char' is not Undefined Behavior)",
+        "name":"chreof_e01 : NO UB (storing results of getchar() in a char is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/chreof/chreof_e01.c"
@@ -226,7 +226,7 @@
         }
     },
     {
-        "name":"chreof_e02 : NO UB (storing results of 'getwc()' in a 'wchar_t' is not Undefined Behavior)",
+        "name":"chreof_e02 : NO UB (storing results of getwc() in a wchar_t is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/chreof/chreof_e02.c"
@@ -241,21 +241,21 @@
         }
     },
     {
-        "name":"chrsgnext_e01 : NO UB (all the invocations of 'isspace()' are valid)",
+        "name":"chrsgnext_e01 : NO UB (all the invocations of isspace() are valid)",
         "prefix_path":"..",
         "files":[
             "tests/chrsgnext/chrsgnext_e01.c"
         ]
     },
     {
-        "name":"chrsgnext_e01 MODIFIED : ADDED AN INVALID CALL TO 'isspace()'",
+        "name":"chrsgnext_e01 MODIFIED : ADDED AN INVALID CALL TO isspace()",
         "prefix_path":"..",
         "files":[
             "tests/chrsgnext/chrsgnext_e01_invalid_argument.c"
         ]
     },
     {
-        "name":"dblfree_e01 : NO UB ('free(NULL)' does nothing - we can repeat it as many times as we want)",
+        "name":"dblfree_e01 : NO UB (free(NULL) does nothing - we can repeat it as many times as we want)",
         "prefix_path":"..",
         "files":[
             "tests/dblfree/dblfree_e01.c"
@@ -381,7 +381,7 @@
         ]
     },
     {
-        "name":"intoflow_e01 : NO UB (TYPO? There cannot be a signed overflow on an 'unsigned int' value.)",
+        "name":"intoflow_e01 : NO UB (TYPO? There cannot be a signed overflow on an unsigned int value)",
         "prefix_path":"..",
         "files":[
             "tests/intoflow/intoflow_e01.c"
@@ -408,14 +408,14 @@
         "slevel":100
     },
     {
-        "name":"intptrconv_005 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"intptrconv_005 : MISPLACED diagnostic required",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_005.c"
         ]
     },
     {
-        "name":"intptrconv_e01 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"intptrconv_e01 : MISPLACED diagnostic required",
         "prefix_path":"..",
         "files":[
             "tests/intptrconv/intptrconv_e01.c"
@@ -443,21 +443,21 @@
         ]
     },
     {
-        "name":"inverrno_e01 : NO UB (not using the standard 'errno' coding pattern when calling a library function is not Undefined Behavior)",
+        "name":"inverrno_e01 : NO UB (not using the standard errno coding pattern when calling a library function is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e01.c"
         ]
     },
     {
-        "name":"inverrno_e02 : NO UB (not using the standard 'errno' coding pattern when calling a library function is not Undefined Behavior)",
+        "name":"inverrno_e02 : NO UB (not using the standard errno coding pattern when calling a library function is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e02.c"
         ]
     },
     {
-        "name":"inverrno_e03 : NO UB (not using the standard 'errno' coding pattern when calling a library function is not Undefined Behavior)",
+        "name":"inverrno_e03 : NO UB (not using the standard errno coding pattern when calling a library function is not Undefined Behavior)",
         "prefix_path":"..",
         "files":[
             "tests/inverrno/inverrno_e03.c"
@@ -499,14 +499,14 @@
         ]
     },
     {
-        "name":"invptr_e04 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"invptr_e04 : MISPLACED diagnostic required",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e04.c"
         ]
     },
     {
-        "name":"invptr_e04 : VERSION WITH abstract string 'str' : OK (found the UB)",
+        "name":"invptr_e04 : VERSION WITH abstract string str : OK (found the UB)",
         "prefix_path":"..",
         "files":[
             "tests/invptr/invptr_e04_abstract.c"
@@ -612,21 +612,6 @@
                 }
             ]
         }
-        /*
-        "val-profile":"analyzer",
-        "slevel":1000,
-        "filesystem":{
-            "files":[
-                {
-                    "name":"testfile.txt",
-                    "size": 10000,
-                    "min_val": 0,
-                    "max_val": 255
-                }
-            ]
-        },
-        "val-stop-at-nth-alarm": 3
-        */
     },
     {
         "name":"liberr_e02 : OK (no false positive)",
@@ -674,28 +659,28 @@
         }
     },
     {
-        "name":"libmod_e01 : NIY (modifying the string returned from setlocale)",
+        "name":"libmod_e01 : NIY (modifying the string returned from setlocale())",
         "prefix_path":"..",
         "files":[
             "tests/libmod/libmod_e01.c"
         ]
     },
     {
-        "name":"libmod_e02 : NIY (modifying the string returned from localeconv)",
+        "name":"libmod_e02 : NIY (modifying the string returned from localeconv())",
         "prefix_path":"..",
         "files":[
             "tests/libmod/libmod_e02.c"
         ]
     },
     {
-        "name":"libmod_e03 : NIY (modifying the string returned from getenv)",
+        "name":"libmod_e03 : NIY (modifying the string returned from getenv())",
         "prefix_path":"..",
         "files":[
             "tests/libmod/libmod_e03.c"
         ]
     },
     {
-        "name":"libmod_e04 : NIY (modifying the string returned from strerror)",
+        "name":"libmod_e04 : NIY (modifying the string returned from strerror())",
         "prefix_path":"..",
         "files":[
             "tests/libmod/libmod_e04.c"
@@ -799,7 +784,7 @@
         ]
     },
     {
-        "name":"nonnullstr_e02 : MISPLACED 'REQUIRED DIAGNOSTIC' (reading uninitialized memory)",
+        "name":"nonnullstr_e02 : MISPLACED diagnostic required (reading uninitialized memory)",
         "prefix_path":"..",
         "files":[
             "tests/nonnullstr/nonnullstr_e02.c"
@@ -870,7 +855,7 @@
         ]
     },
     {
-        "name":"ptrobj_ex2 : TYPO! (there is a typo in the example - 'subrtact')",
+        "name":"ptrobj_ex2 : TYPO! (there is a typo in the example: subrtact)",
         "prefix_path":"..",
         "files":[
             "tests/ptrobj/ptrobj_ex2.c"
@@ -933,7 +918,7 @@
         ]
     },
     {
-        "name":"resident_e08 : NIY (defining reserved identifiers 'malloc()' and 'free()')",
+        "name":"resident_e08 : NIY (defining reserved identifiers malloc() and free())",
         "prefix_path":"..",
         "files":[
             "tests/resident/resident_e08.c"
@@ -961,7 +946,7 @@
         ]
     },
     {
-        "name":"restrict_e02 : NIY (qualifier 'restrict')",
+        "name":"restrict_e02 : NIY (qualifier restrict)",
         "prefix_path":"..",
         "files":[
             "tests/restrict/restrict_e02.c"
@@ -1143,7 +1128,7 @@
         ]
     },
     {
-        "name":"uninitref_e04 : MISPLACED 'REQUIRED DIAGNOSTIC'",
+        "name":"uninitref_e04 : MISPLACED diagnostic required",
         "prefix_path":"..",
         "files":[
             "tests/uninitref/uninitref_e04.c"
@@ -1200,7 +1185,7 @@
         ]
     },
     {
-        "name":"xfilepos_002 : NIY (checking if 'fsetpos' argument always comes from 'fgetpos')",
+        "name":"xfilepos_002 : NIY (checking if fsetpos() argument always comes from fgetpos())",
         "prefix_path":"..",
         "files":[
             "tests/xfilepos/xfilepos_002.c"
@@ -1215,7 +1200,7 @@
         }
     },
     {
-        "name":"xfilepos_e01 : NIY (checking if 'fsetpos' argument always comes from 'fgetpos')",
+        "name":"xfilepos_e01 : NIY (checking if fsetpos() argument always comes from fgetpos())",
         "prefix_path":"..",
         "files":[
             "tests/xfilepos/xfilepos_e01.c"

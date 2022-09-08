@@ -8,7 +8,7 @@ Short description of the results classification:
 * **OK : TRUE NEGATIVE** (x26) - TrustInSoft guarantees no Undefined Behavior and the test description agrees that no diagnostic is required.
 * **NO UB** (x27) - TrustInSoft does not detect Undefined Behavior, because effectively there is no Undefined Behavior in the test, even though the test description says that a diagnostic is required.
 * **UB** (x1) - TrustInSoft detects Undefined Behavior, and effectively there is Undefined Behavior in the test, even though the test description says that no diagnostic is required.
-* **MISPLACED "REQUIRED DIAGNOSTIC"** (x8) - TrustInSoft correctly detects a different Undefined Behavior than the one that the test's description suggests.
+* **MISPLACED diagnostic required** (x8) - TrustInSoft correctly detects a different Undefined Behavior than the one that the test's description suggests.
 * **NOT IMPLEMENTED YET** (x12) - detecting a particular Undefined Behavior is not implemented yet by TrustInSoft. It may be in the roadmap.
 * **OUT OF SCOPE** (x12) - the test's analysis was not finalized, it was decided to be out-of-scope for some reason (e.g. I decided to concentrate on sequential examples and I did not go into the ones involving concurrency and signals).
 
@@ -28,7 +28,7 @@ Undefined Behavior detected as expected.
 
 ### accfree_e03
 
-Result = **MISPLACED "REQUIRED DIAGNOSTIC"**
+Result = **MISPLACED diagnostic required**
 
 TrustInSoft correctly detects another Undefined Behavior before reaching the "diagnostic required" line in this example. The call to `realloc()` is invalid, as `c_str1` is not a reallocable address (the declaration is `char s[MAX_LEN];`, then `s` is passed through the `c_str1` argument). See detailed results either with the GUI (click on the *Inspect with TrustInSoft Analyzer* button in the *Summary* tab) or look directly in the Analyzer Log tab:
 
@@ -76,7 +76,7 @@ Result = **OUT OF SCOPE**
 
 ### addrescape_e01
 
-Result = **MISPLACED "REQUIRED DIAGNOSTIC"**
+Result = **MISPLACED diagnostic required**
 
 What happens at the "diagnostic required" line - assigning an *escaping address* to a global variable - is not Undefined Behavior.
 
@@ -84,7 +84,7 @@ TrustInSoft correctly detects Undefined Behavior here when the *escaping address
 
 ### addrescape_e02
 
-Result = **MISPLACED "REQUIRED DIAGNOSTIC"**
+Result = **MISPLACED diagnostic required**
 
 What happens at the "diagnostic required" line - returning an *escaping address* from a function - is not Undefined Behavior.
 
@@ -424,7 +424,7 @@ No Undefined Behavior detected, as expected.
 
 ### intptrconv_005
 
-Result = **MISPLACED "REQUIRED DIAGNOSTIC"**
+Result = **MISPLACED diagnostic required**
 
 What happens at the "diagnostic required" line - converting an integer number to a pointer - is not Undefined Behavior.
 
@@ -432,7 +432,7 @@ TrustInSoft correctly detects Undefined Behavior here when this value is is actu
 
 ### intptrconv_e01
 
-Result = **MISPLACED "REQUIRED DIAGNOSTIC"**
+Result = **MISPLACED diagnostic required**
 
 What happens at the "diagnostic required" line - converting a pointer to an unsigned integer - is not Undefined Behavior.
 
@@ -524,7 +524,7 @@ No Undefined Behavior detected, as expected.
 
 ### invptr_e04
 
-Result = **MISPLACED "REQUIRED DIAGNOSTIC"**
+Result = **MISPLACED diagnostic required**
 
 What happens at the "diagnostic required" line - converting a pointer to an unsigned integer - is not Undefined Behavior.
 
@@ -708,7 +708,7 @@ Undefined Behavior detected as expected.
 
 ### nonnullstr_e02
 
-Result = **MISPLACED "REQUIRED DIAGNOSTIC"**
+Result = **MISPLACED diagnostic required**
 
 The string `cur_msg`, passed to `wcslen()`, is not only null-terminated, it is completely uninitialized. This is the Undefined Behavior that TrustInSoft detects here.
 
@@ -1019,7 +1019,7 @@ Undefined Behavior detected as expected.
 
 ### uninitref_e04
 
-Result = **MISPLACED "REQUIRED DIAGNOSTIC"**
+Result = **MISPLACED diagnostic required**
 
 Undefined Behavior detected as expected, but the actual first access to unitialized memory happens just before the "diagnostic required" line - in the expression `a[i] < 0`.
 
